@@ -55,7 +55,7 @@ export async function GET(req: NextRequest) {
     const users = JSON.parse(usersContent)
 
     const result = await put('auditpro-users.json', usersContent, {
-      access: 'public',
+      access: 'private',
       addRandomSuffix: false,
       token: effectiveToken!,
     })

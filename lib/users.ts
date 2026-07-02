@@ -1,7 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 import bcrypt from 'bcryptjs'
-import { put, list } from '@vercel/blob'
+import { put, list, download } from '@vercel/blob'
 
 export interface User {
   id: string
@@ -40,12 +40,19 @@ export async function readUsers(): Promise<User[]> {
       const blob = blobs.find(b => b.pathname === BLOB_PATHNAME)
 
       if (blob) {
-        // For private stores: fetch with token if available, otherwise try direct
-        const headers: Record<string, string> = {}
-        const tok = getBlobToken()
-        if (tok) headers['Authorization'] = `Bearer ${tok}`
-        const res = await fetch(blob.url, { headers, cache: 'no-store' })
-        if (res.ok) return res.json()
+        // Private store: must use download() from SDK, not plain fetch
+        const { body } = await download(blob.url, { token: getBlobToken() })
+        const chunks: Uint8Array[] = []
+        const reader = body!.getReader()
+        while (true) {
+          const { done, value } = await reader.read()
+          if (done) break
+          chunks.push(value)
+        }
+        const text = new TextDecoder().decode(
+          chunks.reduce((acc, c) => { const m = new Uint8Array(acc.length + c.length); m.set(acc); m.set(c, acc.length); return m }, new Uint8Array(0))
+        )
+        return JSON.parse(text)
       }
     } catch (e) {
       console.error('[users] Blob read error:', e)
@@ -75,7 +82,7 @@ export async function writeUsers(users: User[]): Promise<void> {
   if (blobAvailable()) {
     // No explicit token — SDK auto-discovers from Vercel env
     await put(BLOB_PATHNAME, JSON.stringify(users, null, 2), {
-      access: 'public',
+      access: 'private',
       addRandomSuffix: false,
       token: getBlobToken(),
     })
