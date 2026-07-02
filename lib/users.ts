@@ -1,7 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 import bcrypt from 'bcryptjs'
-import { put, list, get } from '@vercel/blob'
+import { put, list } from '@vercel/blob'
 
 export interface User {
   id: string
@@ -39,12 +39,16 @@ export async function readUsers(): Promise<User[]> {
       const blob = blobs.find(b => b.pathname === BLOB_PATHNAME)
 
       if (blob) {
-        // v2.x: use get() for authenticated reads of private blobs
-        const res = await get(blob.url, { token, access: 'private' })
-        if (res) {
-          const text = await new Response(res.stream).text()
-          return JSON.parse(text)
-        }
+        // Private blob: fetch with Authorization header, no-store to avoid stale cache
+        const res = await fetch(blob.url, {
+          headers: {
+            Authorization: `Bearer ${token}`,
+            'Cache-Control': 'no-cache, no-store, must-revalidate',
+          },
+          cache: 'no-store',
+        })
+        if (res.ok) return res.json()
+        console.error('[users] Blob fetch status:', res.status, res.statusText)
       }
     } catch (e) {
       console.error('[users] Blob read error:', e)
