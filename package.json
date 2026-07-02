@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.55.0",
+    "@google/generative-ai": "^0.24.1",
     "@vercel/blob": "^0.23.4",
     "axios": "^1.6.7",
     "bcryptjs": "^3.0.3",
