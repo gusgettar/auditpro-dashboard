@@ -15,28 +15,41 @@ export interface User {
 const BLOB_PATHNAME = 'auditpro-users.json'
 const LOCAL_PATH = path.join(process.cwd(), 'data', 'users.json')
 
-// ── Read from Blob or local file ──────────────────────────────────────────────
+function getToken(): string | undefined {
+  return process.env.BLOB_READ_WRITE_TOKEN
+}
+
+// ── Read ──────────────────────────────────────────────────────────────────────
 export async function readUsers(): Promise<User[]> {
-  if (process.env.BLOB_READ_WRITE_TOKEN) {
+  const token = getToken()
+
+  if (token) {
     try {
-      const { blobs } = await list({
-        prefix: BLOB_PATHNAME,
-        token: process.env.BLOB_READ_WRITE_TOKEN,
-      })
+      // list() auto-discovers token from env, or we pass it explicitly
+      const { blobs } = await list({ prefix: BLOB_PATHNAME, token })
       const blob = blobs.find(b => b.pathname === BLOB_PATHNAME)
+
       if (blob) {
-        // Cache-bust to always get fresh data
-        const res = await fetch(`${blob.url}?_=${Date.now()}`)
+        // Private store: need Authorization header to fetch
+        const res = await fetch(blob.url, {
+          headers: { Authorization: `Bearer ${token}` },
+          // Prevent stale cache
+          cache: 'no-store',
+        })
         if (res.ok) return res.json()
       }
     } catch (e) {
       console.error('[users] Blob read error:', e)
     }
-    // Not in Blob yet — seed from bundled file
+
+    // Not found in Blob — seed it from bundled file
     const local = readLocal()
-    if (local.length > 0) await writeUsers(local)
+    if (local.length > 0) {
+      try { await writeUsers(local) } catch (e) { console.error('[users] Blob seed error:', e) }
+    }
     return local
   }
+
   return readLocal()
 }
 
@@ -48,20 +61,24 @@ function readLocal(): User[] {
   }
 }
 
-// ── Write to Blob or local file ───────────────────────────────────────────────
+// ── Write ─────────────────────────────────────────────────────────────────────
 export async function writeUsers(users: User[]): Promise<void> {
-  if (process.env.BLOB_READ_WRITE_TOKEN) {
+  const token = getToken()
+
+  if (token) {
     await put(BLOB_PATHNAME, JSON.stringify(users, null, 2), {
-      access: 'public',
-      token: process.env.BLOB_READ_WRITE_TOKEN,
+      // Private store requires access: 'private'
+      access: 'private' as any,
+      token,
       addRandomSuffix: false,
     })
   } else {
+    // Development: write to local file
     fs.writeFileSync(LOCAL_PATH, JSON.stringify(users, null, 2))
   }
 }
 
-// ── Lookup helpers ────────────────────────────────────────────────────────────
+// ── Lookups ───────────────────────────────────────────────────────────────────
 export async function findByUsername(username: string): Promise<User | undefined> {
   const users = await readUsers()
   return users.find(u => u.username.toLowerCase() === username.toLowerCase())
@@ -86,10 +103,7 @@ export async function createUser(
   const hash = await bcrypt.hash(password, 10)
   const newUser: User = {
     id: String(Date.now()),
-    username,
-    name,
-    password: hash,
-    role,
+    username, name, password: hash, role,
     createdAt: new Date().toISOString(),
   }
   await writeUsers([...users, newUser])
