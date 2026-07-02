@@ -75,6 +75,7 @@ export async function writeUsers(users: User[]): Promise<void> {
     await put(BLOB_PATHNAME, JSON.stringify(users, null, 2), {
       access: 'private',
       addRandomSuffix: false,
+      allowOverwrite: true,
       token: getToken(),
     })
   } else {
