@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { readUsers, createUser, deleteUser, updatePassword, safeUser } from '@/lib/users'
+import { readUsersAsync, createUser, safeUser } from '@/lib/users'
 
 function requireAdmin(req: NextRequest) {
   const role = req.headers.get('x-user-role')
@@ -7,14 +7,13 @@ function requireAdmin(req: NextRequest) {
   return null
 }
 
-// GET /api/users — list all users (admin only)
 export async function GET(req: NextRequest) {
   const err = requireAdmin(req)
   if (err) return err
-  return NextResponse.json(readUsers().map(safeUser))
+  const users = await readUsersAsync()
+  return NextResponse.json(users.map(safeUser))
 }
 
-// POST /api/users — create user (admin only)
 export async function POST(req: NextRequest) {
   const err = requireAdmin(req)
   if (err) return err

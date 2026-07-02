@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import bcrypt from 'bcryptjs'
-import { findByUsername } from '@/lib/users'
+import { findByUsernameAsync } from '@/lib/users'
 import { signToken, COOKIE, EXPIRES } from '@/lib/auth'
 
 export async function POST(req: NextRequest) {
@@ -10,7 +10,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Usuario y contraseña requeridos' }, { status: 400 })
     }
 
-    const user = findByUsername(username)
+    const user = await findByUsernameAsync(username)
     if (!user) {
       return NextResponse.json({ error: 'Usuario o contraseña incorrectos' }, { status: 401 })
     }
@@ -22,7 +22,10 @@ export async function POST(req: NextRequest) {
 
     const token = await signToken({ id: user.id, username: user.username, name: user.name, role: user.role })
 
-    const res = NextResponse.json({ ok: true, user: { id: user.id, username: user.username, name: user.name, role: user.role } })
+    const res = NextResponse.json({
+      ok: true,
+      user: { id: user.id, username: user.username, name: user.name, role: user.role },
+    })
     res.cookies.set(COOKIE, token, {
       httpOnly: true,
       secure: process.env.NODE_ENV === 'production',
