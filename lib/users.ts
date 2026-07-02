@@ -1,7 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 import bcrypt from 'bcryptjs'
-import { put, list } from '@vercel/blob'
+import { put, list, get } from '@vercel/blob'
 
 export interface User {
   id: string
@@ -15,20 +15,18 @@ export interface User {
 const BLOB_PATHNAME = 'auditpro-users.json'
 const LOCAL_PATH = path.join(process.cwd(), 'data', 'users.json')
 
-// Blob is available when the store is connected (Vercel sets this automatically)
-function getBlobToken(): string {
+function getToken(): string {
   const tok =
     process.env.BLOB_READ_WRITE_TOKEN ||
     process.env.BLOB_READ_WRITE_TOKEN_READ_WRITE_TOKEN
-  if (!tok) throw new Error('No Vercel Blob token found in environment')
+  if (!tok) throw new Error('No Vercel Blob token found')
   return tok
 }
 
 function blobAvailable(): boolean {
   return !!(
     process.env.BLOB_READ_WRITE_TOKEN ||
-    process.env.BLOB_READ_WRITE_TOKEN_READ_WRITE_TOKEN ||
-    process.env.BLOB_READ_WRITE_TOKEN_STORE_ID
+    process.env.BLOB_READ_WRITE_TOKEN_READ_WRITE_TOKEN
   )
 }
 
@@ -36,22 +34,23 @@ function blobAvailable(): boolean {
 export async function readUsers(): Promise<User[]> {
   if (blobAvailable()) {
     try {
-      const { blobs } = await list({ prefix: BLOB_PATHNAME, token: getBlobToken() })
+      const token = getToken()
+      const { blobs } = await list({ prefix: BLOB_PATHNAME, token })
       const blob = blobs.find(b => b.pathname === BLOB_PATHNAME)
 
       if (blob) {
-        // Private store blob: fetch with Authorization header
-        const res = await fetch(blob.url, {
-          headers: { Authorization: `Bearer ${getBlobToken()}` },
-          cache: 'no-store',
-        })
-        if (res.ok) return res.json()
+        // v2.x: use get() for authenticated reads of private blobs
+        const res = await get(blob.url, { token, access: 'private' })
+        if (res) {
+          const text = await new Response(res.stream).text()
+          return JSON.parse(text)
+        }
       }
     } catch (e) {
       console.error('[users] Blob read error:', e)
     }
 
-    // Blob empty or unreadable — seed from bundled file
+    // Not in Blob yet — seed from bundled file
     const local = readLocal()
     if (local.length > 0) {
       try { await writeUsers(local) } catch (e) { console.error('[users] Blob seed error:', e) }
@@ -73,11 +72,10 @@ function readLocal(): User[] {
 // ── Write ─────────────────────────────────────────────────────────────────────
 export async function writeUsers(users: User[]): Promise<void> {
   if (blobAvailable()) {
-    // No explicit token — SDK auto-discovers from Vercel env
     await put(BLOB_PATHNAME, JSON.stringify(users, null, 2), {
-      access: 'private' as any,
+      access: 'private',
       addRandomSuffix: false,
-      token: getBlobToken(),
+      token: getToken(),
     })
   } else {
     fs.writeFileSync(LOCAL_PATH, JSON.stringify(users, null, 2))

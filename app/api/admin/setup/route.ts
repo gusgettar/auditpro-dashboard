@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { put, list } from '@vercel/blob'
+import { put, list, get } from '@vercel/blob'
 import path from 'path'
 import fs from 'fs'
 
@@ -55,7 +55,7 @@ export async function GET(req: NextRequest) {
     const users = JSON.parse(usersContent)
 
     const result = await put('auditpro-users.json', usersContent, {
-      access: 'private' as any,
+      access: 'private',
       addRandomSuffix: false,
       token: effectiveToken!,
     })
