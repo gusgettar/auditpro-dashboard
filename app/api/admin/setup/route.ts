@@ -3,8 +3,6 @@ import { put, list } from '@vercel/blob'
 import path from 'path'
 import fs from 'fs'
 
-// One-time setup endpoint: seeds users.json to Vercel Blob
-// Call this once after deploy: GET /api/admin/setup?secret=YOUR_SYNC_SECRET
 export async function GET(req: NextRequest) {
   const { searchParams } = new URL(req.url)
   const secret = searchParams.get('secret')
@@ -13,33 +11,42 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
   }
 
-  const token = process.env.BLOB_READ_WRITE_TOKEN
-  const status = {
-    BLOB_READ_WRITE_TOKEN: token ? `set (${token.substring(0, 20)}...)` : 'NOT SET ❌',
-    GEMINI_API_KEY: process.env.GEMINI_API_KEY ? 'set ✓' : 'NOT SET ❌',
-    JWT_SECRET: process.env.JWT_SECRET ? 'set ✓' : 'NOT SET ❌',
-    SYNC_SECRET: process.env.SYNC_SECRET ? 'set ✓' : 'NOT SET ❌',
+  const storeId   = process.env.BLOB_READ_WRITE_TOKEN_STORE_ID
+  const token     = process.env.BLOB_READ_WRITE_TOKEN
+  const tokenRW   = process.env.BLOB_READ_WRITE_TOKEN_READ_WRITE_TOKEN
+  const webhookKey = process.env.BLOB_READ_WRITE_TOKEN_WEBHOOK_PUBLIC_KEY
+  const effectiveToken = token || tokenRW
+
+  const envStatus = {
+    BLOB_READ_WRITE_TOKEN: token ? `set ✓` : 'NOT SET',
+    BLOB_READ_WRITE_TOKEN_READ_WRITE_TOKEN: tokenRW ? `set ✓` : 'NOT SET',
+    BLOB_READ_WRITE_TOKEN_STORE_ID: storeId ? `set ✓` : 'NOT SET',
+    BLOB_READ_WRITE_TOKEN_WEBHOOK_PUBLIC_KEY: webhookKey ? 'set ✓' : 'NOT SET',
+    effective_token_found: effectiveToken ? 'yes ✓' : 'NO ❌',
+    GEMINI_API_KEY: process.env.GEMINI_API_KEY ? 'set ✓' : 'NOT SET',
+    JWT_SECRET: process.env.JWT_SECRET ? 'set ✓' : 'NOT SET',
+    SYNC_SECRET: process.env.SYNC_SECRET ? 'set ✓' : 'NOT SET',
     NODE_ENV: process.env.NODE_ENV,
   }
 
-  if (!token) {
+  if (!storeId && !effectiveToken) {
     return NextResponse.json({
-      error: 'BLOB_READ_WRITE_TOKEN no está configurado en las env vars de Vercel',
-      env_status: status,
+      error: 'Blob store no conectado — no hay BLOB_READ_WRITE_TOKEN ni BLOB_READ_WRITE_TOKEN_STORE_ID',
+      env_status: envStatus,
     }, { status: 500 })
   }
 
   try {
-    // Check what's already in Blob
-    const { blobs } = await list({ token })
-    const existingUsers = blobs.find(b => b.pathname === 'auditpro-users.json')
+    // Check existing blobs (SDK auto-discovers credentials)
+    const { blobs } = await list({ prefix: 'auditpro-users.json' })
+    const existing = blobs.find(b => b.pathname === 'auditpro-users.json')
 
-    if (existingUsers) {
+    if (existing) {
       return NextResponse.json({
         ok: true,
         message: 'users.json ya existe en Blob',
-        blob_url: existingUsers.url,
-        env_status: status,
+        blob_url: existing.url,
+        env_status: envStatus,
       })
     }
 
@@ -50,20 +57,19 @@ export async function GET(req: NextRequest) {
 
     const result = await put('auditpro-users.json', usersContent, {
       access: 'public',
-      token,
       addRandomSuffix: false,
     })
 
     return NextResponse.json({
       ok: true,
-      message: `users.json subido a Blob con ${users.length} usuario(s)`,
+      message: `users.json subido con ${users.length} usuario(s)`,
       blob_url: result.url,
-      env_status: status,
+      env_status: envStatus,
     })
   } catch (err: any) {
     return NextResponse.json({
       error: err.message,
-      env_status: status,
+      env_status: envStatus,
     }, { status: 500 })
   }
 }

@@ -15,34 +15,40 @@ export interface User {
 const BLOB_PATHNAME = 'auditpro-users.json'
 const LOCAL_PATH = path.join(process.cwd(), 'data', 'users.json')
 
-function getToken(): string | undefined {
-  return process.env.BLOB_READ_WRITE_TOKEN
+// Blob is available when the store is connected (Vercel sets this automatically)
+function getBlobToken(): string | undefined {
+  // Vercel creates different env var names depending on store type
+  return (
+    process.env.BLOB_READ_WRITE_TOKEN ||
+    process.env.BLOB_READ_WRITE_TOKEN_READ_WRITE_TOKEN
+  )
+}
+
+function blobAvailable(): boolean {
+  return !!(getBlobToken() || process.env.BLOB_READ_WRITE_TOKEN_STORE_ID)
 }
 
 // ── Read ──────────────────────────────────────────────────────────────────────
 export async function readUsers(): Promise<User[]> {
-  const token = getToken()
-
-  if (token) {
+  if (blobAvailable()) {
     try {
-      // list() auto-discovers token from env, or we pass it explicitly
-      const { blobs } = await list({ prefix: BLOB_PATHNAME, token })
+      // No explicit token — SDK auto-discovers from Vercel env
+      const { blobs } = await list({ prefix: BLOB_PATHNAME })
       const blob = blobs.find(b => b.pathname === BLOB_PATHNAME)
 
       if (blob) {
-        // Private store: need Authorization header to fetch
-        const res = await fetch(blob.url, {
-          headers: { Authorization: `Bearer ${token}` },
-          // Prevent stale cache
-          cache: 'no-store',
-        })
+        // For private stores: fetch with token if available, otherwise try direct
+        const headers: Record<string, string> = {}
+        const tok = getBlobToken()
+        if (tok) headers['Authorization'] = `Bearer ${tok}`
+        const res = await fetch(blob.url, { headers, cache: 'no-store' })
         if (res.ok) return res.json()
       }
     } catch (e) {
       console.error('[users] Blob read error:', e)
     }
 
-    // Not found in Blob — seed it from bundled file
+    // Blob empty or unreadable — seed from bundled file
     const local = readLocal()
     if (local.length > 0) {
       try { await writeUsers(local) } catch (e) { console.error('[users] Blob seed error:', e) }
@@ -63,17 +69,13 @@ function readLocal(): User[] {
 
 // ── Write ─────────────────────────────────────────────────────────────────────
 export async function writeUsers(users: User[]): Promise<void> {
-  const token = getToken()
-
-  if (token) {
+  if (blobAvailable()) {
+    // No explicit token — SDK auto-discovers from Vercel env
     await put(BLOB_PATHNAME, JSON.stringify(users, null, 2), {
-      // Private store requires access: 'private'
-      access: 'private' as any,
-      token,
+      access: 'public',
       addRandomSuffix: false,
     })
   } else {
-    // Development: write to local file
     fs.writeFileSync(LOCAL_PATH, JSON.stringify(users, null, 2))
   }
 }
@@ -91,9 +93,7 @@ export async function findById(id: string): Promise<User | undefined> {
 
 // ── Mutations ─────────────────────────────────────────────────────────────────
 export async function createUser(
-  username: string,
-  name: string,
-  password: string,
+  username: string, name: string, password: string,
   role: 'admin' | 'viewer' = 'viewer'
 ): Promise<User> {
   const users = await readUsers()
@@ -102,8 +102,7 @@ export async function createUser(
   }
   const hash = await bcrypt.hash(password, 10)
   const newUser: User = {
-    id: String(Date.now()),
-    username, name, password: hash, role,
+    id: String(Date.now()), username, name, password: hash, role,
     createdAt: new Date().toISOString(),
   }
   await writeUsers([...users, newUser])
