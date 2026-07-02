@@ -1,7 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 import bcrypt from 'bcryptjs'
-import { put, head } from '@vercel/blob'
+import { put, list } from '@vercel/blob'
 
 export interface User {
   id: string
@@ -12,99 +12,74 @@ export interface User {
   createdAt: string
 }
 
-const USERS_FILE = path.join(process.cwd(), 'data', 'users.json')
-const BLOB_KEY = 'auditpro-users.json'
-const IS_PROD = !!process.env.BLOB_READ_WRITE_TOKEN
+const BLOB_PATHNAME = 'auditpro-users.json'
+const LOCAL_PATH = path.join(process.cwd(), 'data', 'users.json')
 
-// ── Blob helpers ──────────────────────────────────────────────────────────────
-async function readFromBlob(): Promise<User[] | null> {
-  try {
-    // Try to find the blob
-    const info = await head(BLOB_KEY, { token: process.env.BLOB_READ_WRITE_TOKEN! })
-    const res = await fetch(info.url)
-    if (res.ok) return res.json()
-  } catch {}
-  return null
-}
-
-async function writeToBlob(users: User[]): Promise<void> {
-  await put(BLOB_KEY, JSON.stringify(users, null, 2), {
-    access: 'public',
-    token: process.env.BLOB_READ_WRITE_TOKEN!,
-    addRandomSuffix: false,
-  })
-}
-
-// ── Core read/write ────────────────────────────────────────────────────────────
-export async function readUsersAsync(): Promise<User[]> {
-  if (IS_PROD) {
-    const blobUsers = await readFromBlob()
-    if (blobUsers) return blobUsers
-    // First deploy: seed from local file into Blob
-    const local = readUsersFromDisk()
-    if (local.length > 0) await writeToBlob(local)
+// ── Read from Blob or local file ──────────────────────────────────────────────
+export async function readUsers(): Promise<User[]> {
+  if (process.env.BLOB_READ_WRITE_TOKEN) {
+    try {
+      const { blobs } = await list({
+        prefix: BLOB_PATHNAME,
+        token: process.env.BLOB_READ_WRITE_TOKEN,
+      })
+      const blob = blobs.find(b => b.pathname === BLOB_PATHNAME)
+      if (blob) {
+        // Cache-bust to always get fresh data
+        const res = await fetch(`${blob.url}?_=${Date.now()}`)
+        if (res.ok) return res.json()
+      }
+    } catch (e) {
+      console.error('[users] Blob read error:', e)
+    }
+    // Not in Blob yet — seed from bundled file
+    const local = readLocal()
+    if (local.length > 0) await writeUsers(local)
     return local
   }
-  return readUsersFromDisk()
+  return readLocal()
 }
 
-function readUsersFromDisk(): User[] {
+function readLocal(): User[] {
   try {
-    return JSON.parse(fs.readFileSync(USERS_FILE, 'utf-8'))
+    return JSON.parse(fs.readFileSync(LOCAL_PATH, 'utf-8'))
   } catch {
     return []
   }
 }
 
-async function writeUsersAsync(users: User[]): Promise<void> {
-  if (IS_PROD) {
-    await writeToBlob(users)
+// ── Write to Blob or local file ───────────────────────────────────────────────
+export async function writeUsers(users: User[]): Promise<void> {
+  if (process.env.BLOB_READ_WRITE_TOKEN) {
+    await put(BLOB_PATHNAME, JSON.stringify(users, null, 2), {
+      access: 'public',
+      token: process.env.BLOB_READ_WRITE_TOKEN,
+      addRandomSuffix: false,
+    })
   } else {
-    fs.writeFileSync(USERS_FILE, JSON.stringify(users, null, 2), 'utf-8')
+    fs.writeFileSync(LOCAL_PATH, JSON.stringify(users, null, 2))
   }
 }
 
-// Sync wrappers kept for backwards compat in login (which needs sync read)
-export function readUsers(): User[] {
-  if (IS_PROD) {
-    // In production login route, we call readUsersAsync instead
-    return readUsersFromDisk()
-  }
-  return readUsersFromDisk()
-}
-
-export function writeUsers(users: User[]): void {
-  if (!IS_PROD) {
-    fs.writeFileSync(USERS_FILE, JSON.stringify(users, null, 2), 'utf-8')
-  }
-}
-
-export function findByUsername(username: string): User | undefined {
-  return readUsersFromDisk().find(u => u.username.toLowerCase() === username.toLowerCase())
-}
-
-export function findById(id: string): User | undefined {
-  return readUsersFromDisk().find(u => u.id === id)
-}
-
-// Async versions used by all API routes
-export async function findByUsernameAsync(username: string): Promise<User | undefined> {
-  const users = await readUsersAsync()
+// ── Lookup helpers ────────────────────────────────────────────────────────────
+export async function findByUsername(username: string): Promise<User | undefined> {
+  const users = await readUsers()
   return users.find(u => u.username.toLowerCase() === username.toLowerCase())
 }
 
-export async function findByIdAsync(id: string): Promise<User | undefined> {
-  const users = await readUsersAsync()
+export async function findById(id: string): Promise<User | undefined> {
+  const users = await readUsers()
   return users.find(u => u.id === id)
 }
 
+// ── Mutations ─────────────────────────────────────────────────────────────────
 export async function createUser(
   username: string,
   name: string,
   password: string,
   role: 'admin' | 'viewer' = 'viewer'
 ): Promise<User> {
-  const users = await readUsersAsync()
+  const users = await readUsers()
   if (users.find(u => u.username.toLowerCase() === username.toLowerCase())) {
     throw new Error('El usuario ya existe')
   }
@@ -117,25 +92,25 @@ export async function createUser(
     role,
     createdAt: new Date().toISOString(),
   }
-  await writeUsersAsync([...users, newUser])
+  await writeUsers([...users, newUser])
   return newUser
 }
 
 export async function updatePassword(id: string, newPassword: string): Promise<void> {
-  const users = await readUsersAsync()
+  const users = await readUsers()
   const idx = users.findIndex(u => u.id === id)
   if (idx === -1) throw new Error('Usuario no encontrado')
   users[idx].password = await bcrypt.hash(newPassword, 10)
-  await writeUsersAsync(users)
+  await writeUsers(users)
 }
 
 export async function deleteUser(id: string): Promise<void> {
-  const users = await readUsersAsync()
+  const users = await readUsers()
   if (users.filter(u => u.role === 'admin').length === 1) {
     const user = users.find(u => u.id === id)
     if (user?.role === 'admin') throw new Error('No se puede eliminar el único administrador')
   }
-  await writeUsersAsync(users.filter(u => u.id !== id))
+  await writeUsers(users.filter(u => u.id !== id))
 }
 
 export function safeUser(u: User) {

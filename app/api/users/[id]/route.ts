@@ -1,9 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { deleteUser, updatePassword, findByIdAsync, safeUser } from '@/lib/users'
+import { deleteUser, updatePassword, findById, safeUser } from '@/lib/users'
 
 function requireAdmin(req: NextRequest) {
-  const role = req.headers.get('x-user-role')
-  if (role !== 'admin') return NextResponse.json({ error: 'Solo administradores' }, { status: 403 })
+  if (req.headers.get('x-user-role') !== 'admin')
+    return NextResponse.json({ error: 'Solo administradores' }, { status: 403 })
   return null
 }
 
@@ -21,16 +21,14 @@ export async function DELETE(req: NextRequest, { params }: { params: { id: strin
 export async function PATCH(req: NextRequest, { params }: { params: { id: string } }) {
   const requestingId = req.headers.get('x-user-id')
   const role = req.headers.get('x-user-role')
-  if (role !== 'admin' && requestingId !== params.id) {
+  if (role !== 'admin' && requestingId !== params.id)
     return NextResponse.json({ error: 'Sin permiso' }, { status: 403 })
-  }
   try {
     const { password } = await req.json()
-    if (!password || password.length < 6) {
+    if (!password || password.length < 6)
       return NextResponse.json({ error: 'La contraseña debe tener al menos 6 caracteres' }, { status: 400 })
-    }
     await updatePassword(params.id, password)
-    const user = await findByIdAsync(params.id)
+    const user = await findById(params.id)
     return NextResponse.json(user ? safeUser(user) : { ok: true })
   } catch (e: any) {
     return NextResponse.json({ error: e.message }, { status: 400 })
