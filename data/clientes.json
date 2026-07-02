@@ -1,0 +1,702 @@
+[
+  {
+    "party_id": "46",
+    "name": "FAMILIA / AMIGOS",
+    "balance": -26252600.07,
+    "tax_condition": "Consumidor Final",
+    "date_created": "2020-11-26T11:40:05"
+  },
+  {
+    "party_id": "1007",
+    "name": "PERSONAL 1",
+    "balance": -3915740.0,
+    "tax_condition": "Consumidor Final",
+    "date_created": "2024-02-09T11:19:51"
+  },
+  {
+    "party_id": "1008",
+    "name": "PERSONAL 2",
+    "balance": -2658600.0,
+    "tax_condition": "Consumidor Final",
+    "date_created": "2024-02-09T11:20:21"
+  },
+  {
+    "party_id": "112",
+    "name": "ANDRES BUDEGUER",
+    "balance": -1036700.0,
+    "tax_condition": "Consumidor Final",
+    "date_created": "2020-11-26T11:40:05"
+  },
+  {
+    "party_id": "99",
+    "name": "SERGIO CASTOLDI",
+    "balance": -913390.0,
+    "tax_condition": "Consumidor Final",
+    "date_created": "2020-11-26T11:40:05"
+  },
+  {
+    "party_id": "465",
+    "name": "BUDEGUER PAULO",
+    "balance": -254500.0,
+    "tax_condition": "Consumidor Final",
+    "date_created": "2022-01-20T22:16:26"
+  },
+  {
+    "party_id": "57",
+    "name": "SOTELO SUBCOMISARIO",
+    "balance": -253150.0,
+    "tax_condition": "Consumidor Final",
+    "date_created": "2020-11-26T11:40:05"
+  },
+  {
+    "party_id": "464",
+    "name": "BUDEGUER LOURDES",
+    "balance": -41100.0,
+    "tax_condition": "Consumidor Final",
+    "date_created": "2022-01-19T22:30:36"
+  },
+  {
+    "party_id": "113",
+    "name": "SANDRA JIMENEZ",
+    "balance": -28685.0,
+    "tax_condition": "Consumidor Final",
+    "date_created": "2020-11-26T11:40:05"
+  },
+  {
+    "party_id": "47",
+    "name": "3M ARGENTINA",
+    "balance": 0.0,
+    "tax_condition": "Monotributista",
+    "date_created": "2020-11-26T11:40:05"
+  },
+  {
+    "party_id": "48",
+    "name": "ABRATTE GUILLERMO",
+    "balance": 0.0,
+    "tax_condition": "Consumidor Final",
+    "date_created": "2020-11-26T11:40:05"
+  },
+  {
+    "party_id": "49",
+    "name": "ACOMPAÑAR SRL",
+    "balance": 0.0,
+    "tax_condition": "Monotributista",
+    "date_created": "2020-11-26T11:40:05"
+  },
+  {
+    "party_id": "50",
+    "name": "ACOSTA WALTER JOSE",
+    "balance": 0.0,
+    "tax_condition": "Monotributista",
+    "date_created": "2020-11-26T11:40:05"
+  },
+  {
+    "party_id": "51",
+    "name": "AFIP",
+    "balance": 0.0,
+    "tax_condition": "Monotributista",
+    "date_created": "2020-11-26T11:40:05"
+  },
+  {
+    "party_id": "52",
+    "name": "AGRO AST S.R.L.",
+    "balance": 0.0,
+    "tax_condition": "Monotributista",
+    "date_created": "2020-11-26T11:40:05"
+  },
+  {
+    "party_id": "53",
+    "name": "AIDA SRL",
+    "balance": 0.0,
+    "tax_condition": "Monotributista",
+    "date_created": "2020-11-26T11:40:05"
+  },
+  {
+    "party_id": "54",
+    "name": "PROYECTAR INGENIERA SAS",
+    "balance": 0.0,
+    "tax_condition": "Monotributista",
+    "date_created": "2020-11-26T11:40:05"
+  },
+  {
+    "party_id": "55",
+    "name": "ANA BUDEGUER",
+    "balance": 0.0,
+    "tax_condition": "Consumidor Final",
+    "date_created": "2020-11-26T11:40:05"
+  },
+  {
+    "party_id": "56",
+    "name": "AGD SA (ACEITERA)",
+    "balance": 0.0,
+    "tax_condition": "Monotributista",
+    "date_created": "2020-11-26T11:40:05"
+  },
+  {
+    "party_id": "58",
+    "name": "ASOCIACION FITOSANITARIA DEL NORTE",
+    "balance": 0.0,
+    "tax_condition": "Exento",
+    "date_created": "2020-11-26T11:40:05"
+  },
+  {
+    "party_id": "59",
+    "name": "AGRO DEL SOL SRL",
+    "balance": 0.0,
+    "tax_condition": "Monotributista",
+    "date_created": "2020-11-26T11:40:05"
+  },
+  {
+    "party_id": "60",
+    "name": "BRUFOR AGRO SRL",
+    "balance": 0.0,
+    "tax_condition": "Monotributista",
+    "date_created": "2020-11-26T11:40:05"
+  },
+  {
+    "party_id": "61",
+    "name": "ASOCIACION FITOSANITARIA DEL N",
+    "balance": 0.0,
+    "tax_condition": "Exento",
+    "date_created": "2020-11-26T11:40:05"
+  },
+  {
+    "party_id": "62",
+    "name": "ERAZZU GONZALO MARTIN",
+    "balance": 0.0,
+    "tax_condition": "Monotributista",
+    "date_created": "2020-11-26T11:40:05"
+  },
+  {
+    "party_id": "63",
+    "name": "APCOR SOFTWARE SRL",
+    "balance": 0.0,
+    "tax_condition": "Monotributista",
+    "date_created": "2020-11-26T11:40:05"
+  },
+  {
+    "party_id": "64",
+    "name": "PEREYRA MAURO",
+    "balance": 0.0,
+    "tax_condition": "Monotributista",
+    "date_created": "2020-11-26T11:40:05"
+  },
+  {
+    "party_id": "65",
+    "name": "PUEBLE SA",
+    "balance": 0.0,
+    "tax_condition": "Monotributista",
+    "date_created": "2020-11-26T11:40:05"
+  },
+  {
+    "party_id": "66",
+    "name": "MONTAGRO SAS",
+    "balance": 0.0,
+    "tax_condition": "Monotributista",
+    "date_created": "2020-11-26T11:40:05"
+  },
+  {
+    "party_id": "67",
+    "name": "TRANSPORTE LA SEVILLANITA SRL",
+    "balance": 0.0,
+    "tax_condition": "Monotributista",
+    "date_created": "2020-11-26T11:40:05"
+  },
+  {
+    "party_id": "68",
+    "name": "CONSUMO DEL BAR",
+    "balance": 0.0,
+    "tax_condition": "Consumidor Final",
+    "date_created": "2020-11-26T11:40:05"
+  },
+  {
+    "party_id": "69",
+    "name": "MATIZ SA",
+    "balance": 0.0,
+    "tax_condition": "Monotributista",
+    "date_created": "2020-11-26T11:40:05"
+  },
+  {
+    "party_id": "70",
+    "name": "NAHUEL SECO ROCHA",
+    "balance": 0.0,
+    "tax_condition": "Monotributista",
+    "date_created": "2020-11-26T11:40:05"
+  },
+  {
+    "party_id": "71",
+    "name": "ASSAD MARCOS RODRIGO",
+    "balance": 0.0,
+    "tax_condition": "Monotributista",
+    "date_created": "2020-11-26T11:40:05"
+  },
+  {
+    "party_id": "72",
+    "name": "PAMPALONE CRISTHIAN JUAN MARIO",
+    "balance": 0.0,
+    "tax_condition": "Monotributista",
+    "date_created": "2020-11-26T11:40:05"
+  },
+  {
+    "party_id": "73",
+    "name": "BROMETAN",
+    "balance": 0.0,
+    "tax_condition": "Monotributista",
+    "date_created": "2020-11-26T11:40:05"
+  },
+  {
+    "party_id": "74",
+    "name": "VIDRIAL SRL",
+    "balance": 0.0,
+    "tax_condition": "Monotributista",
+    "date_created": "2020-11-26T11:40:05"
+  },
+  {
+    "party_id": "75",
+    "name": "AGROQUIMICA ALBERDI SRL",
+    "balance": 0.0,
+    "tax_condition": "Monotributista",
+    "date_created": "2020-11-26T11:40:05"
+  },
+  {
+    "party_id": "76",
+    "name": "VICENTE TRAPANI S.A",
+    "balance": 0.0,
+    "tax_condition": "Monotributista",
+    "date_created": "2020-11-26T11:40:05"
+  },
+  {
+    "party_id": "77",
+    "name": "EL ENCERAO SRL",
+    "balance": 0.0,
+    "tax_condition": "Monotributista",
+    "date_created": "2020-11-26T11:40:05"
+  },
+  {
+    "party_id": "78",
+    "name": "SANTI NASSAR GERARDO RUBEN",
+    "balance": 0.0,
+    "tax_condition": "Monotributista",
+    "date_created": "2020-11-26T11:40:05"
+  },
+  {
+    "party_id": "79",
+    "name": "I + D AGRO",
+    "balance": 0.0,
+    "tax_condition": "Monotributista",
+    "date_created": "2020-11-26T11:40:05"
+  },
+  {
+    "party_id": "80",
+    "name": "COMUNA DE RACO",
+    "balance": 0.0,
+    "tax_condition": "Monotributista",
+    "date_created": "2020-11-26T11:40:05"
+  },
+  {
+    "party_id": "81",
+    "name": "SALTA REFRESCOS S. A",
+    "balance": 0.0,
+    "tax_condition": "Monotributista",
+    "date_created": "2020-11-26T11:40:05"
+  },
+  {
+    "party_id": "82",
+    "name": "OLESZUK DANTE",
+    "balance": 0.0,
+    "tax_condition": "Monotributista",
+    "date_created": "2020-11-26T11:40:05"
+  },
+  {
+    "party_id": "83",
+    "name": "MARIO",
+    "balance": 0.0,
+    "tax_condition": "Consumidor Final",
+    "date_created": "2020-11-26T11:40:05"
+  },
+  {
+    "party_id": "84",
+    "name": "ROXANA",
+    "balance": 0.0,
+    "tax_condition": "Consumidor Final",
+    "date_created": "2020-11-26T11:40:05"
+  },
+  {
+    "party_id": "85",
+    "name": "ROBERTO",
+    "balance": 0.0,
+    "tax_condition": "Consumidor Final",
+    "date_created": "2020-11-26T11:40:05"
+  },
+  {
+    "party_id": "86",
+    "name": "MARCOS OLEA",
+    "balance": 0.0,
+    "tax_condition": "Consumidor Final",
+    "date_created": "2020-11-26T11:40:05"
+  },
+  {
+    "party_id": "87",
+    "name": "VALENZUELA CARLOS SEBASTIAN",
+    "balance": 0.0,
+    "tax_condition": "Monotributista",
+    "date_created": "2020-11-26T11:40:05"
+  },
+  {
+    "party_id": "88",
+    "name": "SPORT ICON",
+    "balance": 0.0,
+    "tax_condition": "Monotributista",
+    "date_created": "2020-11-26T11:40:05"
+  },
+  {
+    "party_id": "89",
+    "name": "ADAD JORGE MIGUEL",
+    "balance": 0.0,
+    "tax_condition": "Monotributista",
+    "date_created": "2020-11-26T11:40:05"
+  },
+  {
+    "party_id": "90",
+    "name": "FUNDACION ARGEN- INTA",
+    "balance": 0.0,
+    "tax_condition": "Exento",
+    "date_created": "2020-11-26T11:40:05"
+  },
+  {
+    "party_id": "91",
+    "name": "LUIS ROLANDO FIGUEROA",
+    "balance": 0.0,
+    "tax_condition": "Monotributista",
+    "date_created": "2020-11-26T11:40:05"
+  },
+  {
+    "party_id": "92",
+    "name": "MIGUEL DI SILVESTRI",
+    "balance": 0.0,
+    "tax_condition": "Monotributista",
+    "date_created": "2020-11-26T11:40:05"
+  },
+  {
+    "party_id": "93",
+    "name": "GUSTAVO RUIZ",
+    "balance": 0.0,
+    "tax_condition": "Consumidor Final",
+    "date_created": "2020-11-26T11:40:05"
+  },
+  {
+    "party_id": "94",
+    "name": "ARGENTI LEMON",
+    "balance": 0.0,
+    "tax_condition": "Monotributista",
+    "date_created": "2020-11-26T11:40:05"
+  },
+  {
+    "party_id": "95",
+    "name": "TRANSPORTE HACHA DE PIEDRA S.R.L.",
+    "balance": 0.0,
+    "tax_condition": "Monotributista",
+    "date_created": "2020-11-26T11:40:05"
+  },
+  {
+    "party_id": "96",
+    "name": "ALE JULIO CESAR",
+    "balance": 0.0,
+    "tax_condition": "Monotributista",
+    "date_created": "2020-11-26T11:40:05"
+  },
+  {
+    "party_id": "97",
+    "name": "RIVADENEIRA PABLO",
+    "balance": 0.0,
+    "tax_condition": "Consumidor Final",
+    "date_created": "2020-11-26T11:40:05"
+  },
+  {
+    "party_id": "98",
+    "name": "ANGEL HUGO ORELLANA",
+    "balance": 0.0,
+    "tax_condition": "Monotributista",
+    "date_created": "2020-11-26T11:40:05"
+  },
+  {
+    "party_id": "100",
+    "name": "GEOMACO S. A",
+    "balance": 0.0,
+    "tax_condition": "Monotributista",
+    "date_created": "2020-11-26T11:40:05"
+  },
+  {
+    "party_id": "101",
+    "name": "ALBARRACIN DOMINGO LIZANDRO",
+    "balance": 0.0,
+    "tax_condition": "Monotributista",
+    "date_created": "2020-11-26T11:40:05"
+  },
+  {
+    "party_id": "102",
+    "name": "gemza automotor",
+    "balance": 0.0,
+    "tax_condition": "Monotributista",
+    "date_created": "2020-11-26T11:40:05"
+  },
+  {
+    "party_id": "103",
+    "name": "copat limitada",
+    "balance": 0.0,
+    "tax_condition": "Monotributista",
+    "date_created": "2020-11-26T11:40:05"
+  },
+  {
+    "party_id": "104",
+    "name": "OLEJNIK PABLO",
+    "balance": 0.0,
+    "tax_condition": "Monotributista",
+    "date_created": "2020-11-26T11:40:05"
+  },
+  {
+    "party_id": "105",
+    "name": "ALFREDO I CORRAL SA",
+    "balance": 0.0,
+    "tax_condition": "Monotributista",
+    "date_created": "2020-11-26T11:40:05"
+  },
+  {
+    "party_id": "106",
+    "name": "DESSONE SA",
+    "balance": 0.0,
+    "tax_condition": "Monotributista",
+    "date_created": "2020-11-26T11:40:05"
+  },
+  {
+    "party_id": "107",
+    "name": "ALE JULIO CESAR 2",
+    "balance": 0.0,
+    "tax_condition": "Monotributista",
+    "date_created": "2020-11-26T11:40:05"
+  },
+  {
+    "party_id": "108",
+    "name": "TRANSPORTE RUTA 1 SRL",
+    "balance": 0.0,
+    "tax_condition": "Monotributista",
+    "date_created": "2020-11-26T11:40:05"
+  },
+  {
+    "party_id": "109",
+    "name": "Patricio Monjes",
+    "balance": 0.0,
+    "tax_condition": "Monotributista",
+    "date_created": "2020-11-26T11:40:05"
+  },
+  {
+    "party_id": "110",
+    "name": "SSA CONTRUCCIONES SRL",
+    "balance": 0.0,
+    "tax_condition": "Consumidor Final",
+    "date_created": "2020-11-26T11:40:05"
+  },
+  {
+    "party_id": "111",
+    "name": "SSA CONSTRUCCIONES S.R.L.",
+    "balance": 0.0,
+    "tax_condition": "Monotributista",
+    "date_created": "2020-11-26T11:40:05"
+  },
+  {
+    "party_id": "114",
+    "name": "FIBERCOM S.R.L.",
+    "balance": 0.0,
+    "tax_condition": "Monotributista",
+    "date_created": "2020-11-26T11:40:05"
+  },
+  {
+    "party_id": "115",
+    "name": "ADAD JORGE MIGUEL",
+    "balance": 0.0,
+    "tax_condition": "Monotributista",
+    "date_created": "2020-11-26T11:40:05"
+  },
+  {
+    "party_id": "116",
+    "name": "BRITO PABLO SEBASTIAN",
+    "balance": 0.0,
+    "tax_condition": "Monotributista",
+    "date_created": "2020-11-26T11:40:05"
+  },
+  {
+    "party_id": "117",
+    "name": "CAVA 306 SRL",
+    "balance": 0.0,
+    "tax_condition": "Monotributista",
+    "date_created": "2020-11-26T11:40:05"
+  },
+  {
+    "party_id": "118",
+    "name": "PAMPOLINE CRISTIAN",
+    "balance": 0.0,
+    "tax_condition": "Monotributista",
+    "date_created": "2020-11-26T11:40:05"
+  },
+  {
+    "party_id": "215",
+    "name": "agro desarrollos tecnologia agr.",
+    "balance": 0.0,
+    "tax_condition": "Monotributista",
+    "date_created": "2020-11-30T14:51:41"
+  },
+  {
+    "party_id": "216",
+    "name": "SORIA DANIEL ENRIQUE",
+    "balance": 0.0,
+    "tax_condition": "Monotributista",
+    "date_created": "2020-12-01T22:02:21"
+  },
+  {
+    "party_id": "219",
+    "name": "REYES JUAN LUIS",
+    "balance": 0.0,
+    "tax_condition": "Monotributista",
+    "date_created": "2020-12-06T14:12:18"
+  },
+  {
+    "party_id": "220",
+    "name": "NASSER ROLANDO JAVIER",
+    "balance": 0.0,
+    "tax_condition": "Monotributista",
+    "date_created": "2020-12-06T22:12:13"
+  },
+  {
+    "party_id": "221",
+    "name": "COCANA",
+    "balance": 0.0,
+    "tax_condition": "Monotributista",
+    "date_created": "2020-12-06T23:20:00"
+  },
+  {
+    "party_id": "222",
+    "name": "COCANA PEDRO HORACIO",
+    "balance": 0.0,
+    "tax_condition": "Monotributista",
+    "date_created": "2020-12-06T23:21:14"
+  },
+  {
+    "party_id": "223",
+    "name": "FENIX SERVICIOS SRL",
+    "balance": 0.0,
+    "tax_condition": "Monotributista",
+    "date_created": "2020-12-08T21:26:20"
+  },
+  {
+    "party_id": "224",
+    "name": "AGRO CLASIC",
+    "balance": 0.0,
+    "tax_condition": "Monotributista",
+    "date_created": "2020-12-09T12:27:49"
+  },
+  {
+    "party_id": "225",
+    "name": "PICON SERVICE CENTER",
+    "balance": 0.0,
+    "tax_condition": "Monotributista",
+    "date_created": "2020-12-09T14:26:15"
+  },
+  {
+    "party_id": "226",
+    "name": "RUIZ JORGE LUIS",
+    "balance": 0.0,
+    "tax_condition": "Monotributista",
+    "date_created": "2020-12-11T15:33:51"
+  },
+  {
+    "party_id": "228",
+    "name": "gemsa automotores",
+    "balance": 0.0,
+    "tax_condition": "Monotributista",
+    "date_created": "2020-12-16T15:32:01"
+  },
+  {
+    "party_id": "229",
+    "name": "PALIZA JORGE",
+    "balance": 0.0,
+    "tax_condition": "Monotributista",
+    "date_created": "2020-12-17T00:46:10"
+  },
+  {
+    "party_id": "230",
+    "name": "EMPRESA LA PIEDAD S.A",
+    "balance": 0.0,
+    "tax_condition": "Monotributista",
+    "date_created": "2020-12-17T13:04:43"
+  },
+  {
+    "party_id": "231",
+    "name": "SUMAR",
+    "balance": 0.0,
+    "tax_condition": "Exento",
+    "date_created": "2020-12-17T14:40:42"
+  },
+  {
+    "party_id": "232",
+    "name": "NALECC SEGURITY",
+    "balance": 0.0,
+    "tax_condition": "Monotributista",
+    "date_created": "2020-12-18T13:16:47"
+  },
+  {
+    "party_id": "233",
+    "name": "J.BERARDINELLI S.R.L.",
+    "balance": 0.0,
+    "tax_condition": "Monotributista",
+    "date_created": "2020-12-23T21:42:52"
+  },
+  {
+    "party_id": "234",
+    "name": "PASCUTTINI LUIS RAMON",
+    "balance": 0.0,
+    "tax_condition": "Monotributista",
+    "date_created": "2020-12-25T20:10:03"
+  },
+  {
+    "party_id": "235",
+    "name": "GESTION Y OPERACIONES",
+    "balance": 0.0,
+    "tax_condition": "Monotributista",
+    "date_created": "2020-12-28T20:43:47"
+  },
+  {
+    "party_id": "237",
+    "name": "OLEJNIK PABLO",
+    "balance": 0.0,
+    "tax_condition": "Monotributista",
+    "date_created": "2020-12-30T11:03:12"
+  },
+  {
+    "party_id": "238",
+    "name": "ESTERO SRL",
+    "balance": 0.0,
+    "tax_condition": "Monotributista",
+    "date_created": "2020-12-30T14:01:37"
+  },
+  {
+    "party_id": "239",
+    "name": "Fundacion Ruah",
+    "balance": 0.0,
+    "tax_condition": "Exento",
+    "date_created": "2020-12-30T16:11:11"
+  },
+  {
+    "party_id": "240",
+    "name": "BULOGNERIA REGINATO",
+    "balance": 0.0,
+    "tax_condition": "Monotributista",
+    "date_created": "2020-12-31T15:23:56"
+  },
+  {
+    "party_id": "242",
+    "name": "BERNADAL SERGIO R.",
+    "balance": 0.0,
+    "tax_condition": "Monotributista",
+    "date_created": "2021-01-03T20:29:05"
+  }
+]

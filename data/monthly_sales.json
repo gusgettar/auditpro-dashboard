@@ -1,0 +1,44 @@
+[
+  {
+    "month": "2025-12",
+    "orders": 6673,
+    "revenue": 207975285.3,
+    "avg_ticket": 31166.68
+  },
+  {
+    "month": "2026-01",
+    "orders": 8938,
+    "revenue": 247006274.66,
+    "avg_ticket": 27635.52
+  },
+  {
+    "month": "2026-02",
+    "orders": 8174,
+    "revenue": 225404300.61,
+    "avg_ticket": 27575.76
+  },
+  {
+    "month": "2026-03",
+    "orders": 8263,
+    "revenue": 214967006.78,
+    "avg_ticket": 26015.61
+  },
+  {
+    "month": "2026-04",
+    "orders": 7837,
+    "revenue": 202608001.06,
+    "avg_ticket": 25852.75
+  },
+  {
+    "month": "2026-05",
+    "orders": 7817,
+    "revenue": 193188623.15,
+    "avg_ticket": 24713.91
+  },
+  {
+    "month": "2026-06",
+    "orders": 7264,
+    "revenue": 190430345.98,
+    "avg_ticket": 26215.63
+  }
+]

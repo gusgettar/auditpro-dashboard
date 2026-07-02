@@ -1,0 +1,6 @@
+import { getData } from '@/lib/data'
+import { NextResponse } from 'next/server'
+
+export async function GET() {
+  return NextResponse.json(await getData('products_recipes'))
+}

@@ -1,0 +1,2223 @@
+{
+  "business_summary": "Cafetería-restaurante argentino con salón y delivery. Sistema POS con facturación electrónica AFIP (CAE). Período de datos: diciembre 2025 a junio 2026 (~7 meses). 54,967 órdenes finalizadas. Total recaudado: $1,481,607,038 ARS. Ticket promedio: $26,954 ARS. 19 mozos registrados. 1,548 clientes. Integración con PedidosYa y MercadoPago.",
+  "key_metrics": {
+    "total_orders": 54967,
+    "total_revenue": 1481607037.54,
+    "avg_ticket": 26954.48,
+    "total_invoices": 19623,
+    "total_invoiced": 804332341.83,
+    "total_purchases": 2262,
+    "total_purchase_amount": 745858246.3,
+    "total_withdrawals": 634004636.18,
+    "total_customers": 1548,
+    "total_products": 696,
+    "date_from": "2025-12-09",
+    "date_to": "2026-06-30",
+    "db_version": "2025-04-10T00:00:00"
+  },
+  "monthly_trend": [
+    {
+      "month": "2025-12",
+      "orders": 6673,
+      "revenue": 207975285.3,
+      "avg_ticket": 31166.68
+    },
+    {
+      "month": "2026-01",
+      "orders": 8938,
+      "revenue": 247006274.66,
+      "avg_ticket": 27635.52
+    },
+    {
+      "month": "2026-02",
+      "orders": 8174,
+      "revenue": 225404300.61,
+      "avg_ticket": 27575.76
+    },
+    {
+      "month": "2026-03",
+      "orders": 8263,
+      "revenue": 214967006.78,
+      "avg_ticket": 26015.61
+    },
+    {
+      "month": "2026-04",
+      "orders": 7837,
+      "revenue": 202608001.06,
+      "avg_ticket": 25852.75
+    },
+    {
+      "month": "2026-05",
+      "orders": 7817,
+      "revenue": 193188623.15,
+      "avg_ticket": 24713.91
+    },
+    {
+      "month": "2026-06",
+      "orders": 7264,
+      "revenue": 190430345.98,
+      "avg_ticket": 26215.63
+    }
+  ],
+  "top_products": [
+    {
+      "name": "LIGHT CAFE CON LECHE",
+      "quantity": 17244.0,
+      "revenue": 114620400.0,
+      "avg_price": 6646.97
+    },
+    {
+      "name": "CLASICO CAFE CON LECHE",
+      "quantity": 10570.0,
+      "revenue": 64292700.0,
+      "avg_price": 6082.56
+    },
+    {
+      "name": "TRIPLE DE JAMON Y QUESO",
+      "quantity": 6604.0,
+      "revenue": 45126000.0,
+      "avg_price": 6833.13
+    },
+    {
+      "name": "COCA",
+      "quantity": 12430.0,
+      "revenue": 40858500.0,
+      "avg_price": 3287.09
+    },
+    {
+      "name": "MILANESA NAPOLITANA PARA 2",
+      "quantity": 1104.0,
+      "revenue": 39968000.0,
+      "avg_price": 36202.9
+    },
+    {
+      "name": "JARRA LIMONADA CON MENTA Y JENGIBRE",
+      "quantity": 4127.0,
+      "revenue": 39640000.0,
+      "avg_price": 9605.04
+    },
+    {
+      "name": "MATAMBRE AL VERDEO PARA 2",
+      "quantity": 903.0,
+      "revenue": 34407000.0,
+      "avg_price": 38102.99
+    },
+    {
+      "name": "CORTADO EN JARRITA",
+      "quantity": 8542.0,
+      "revenue": 30083400.0,
+      "avg_price": 3521.82
+    },
+    {
+      "name": "AMERICANO CAFE CON LECHE",
+      "quantity": 3993.0,
+      "revenue": 30069600.0,
+      "avg_price": 7530.58
+    },
+    {
+      "name": "HEINEKEN X1L",
+      "quantity": 2150.0,
+      "revenue": 29020950.0,
+      "avg_price": 13498.12
+    },
+    {
+      "name": "JARRA LIMONADA CLASICA",
+      "quantity": 3124.0,
+      "revenue": 26672000.0,
+      "avg_price": 8537.77
+    },
+    {
+      "name": "MEXICANO ENTERO",
+      "quantity": 1111.0,
+      "revenue": 23996000.0,
+      "avg_price": 21598.56
+    },
+    {
+      "name": "TOSTON AVOCADO CAFE CON LECHE",
+      "quantity": 2424.0,
+      "revenue": 20742200.0,
+      "avg_price": 8557.01
+    },
+    {
+      "name": "JARRA LIMONADA DE FRUTOS ROJOS",
+      "quantity": 2101.0,
+      "revenue": 20193000.0,
+      "avg_price": 9611.14
+    },
+    {
+      "name": "TRIPLE DE TERNERA Y QUESO",
+      "quantity": 2260.0,
+      "revenue": 16797300.0,
+      "avg_price": 7432.43
+    },
+    {
+      "name": "CAFE EN JARRITA",
+      "quantity": 4756.0,
+      "revenue": 16763400.0,
+      "avg_price": 3524.68
+    },
+    {
+      "name": "EMPANADA DE CARNE",
+      "quantity": 7718.0,
+      "revenue": 16606203.0,
+      "avg_price": 2151.62
+    },
+    {
+      "name": "PROMO MATAMBRE + JARRA",
+      "quantity": 378.0,
+      "revenue": 16443000.0,
+      "avg_price": 43500.0
+    },
+    {
+      "name": "IMPERIAL 1Lt",
+      "quantity": 1454.0,
+      "revenue": 15994000.0,
+      "avg_price": 11000.0
+    },
+    {
+      "name": "COCA ZERO",
+      "quantity": 4712.0,
+      "revenue": 15530800.0,
+      "avg_price": 3296.01
+    }
+  ],
+  "payment_breakdown": {
+    "efectivo": 675203862.41,
+    "debito": 242893130.2,
+    "credito": 68065310.31,
+    "mercadopago": 460877671.57,
+    "pedidos_ya": 0.0,
+    "other": 197600.0
+  },
+  "sales_by_waiter": [
+    {
+      "user_name": "Dany capovilla",
+      "orders": 7035,
+      "revenue": 152047363.57,
+      "avg_ticket": 21612.99,
+      "removals": 0,
+      "discounts": 0.0
+    },
+    {
+      "user_name": "CYNTHIA FRIAS",
+      "orders": 4805,
+      "revenue": 137640010.75,
+      "avg_ticket": 28645.16,
+      "removals": 0,
+      "discounts": 0.0
+    },
+    {
+      "user_name": "gabriel monti",
+      "orders": 4122,
+      "revenue": 118807095.04,
+      "avg_ticket": 28822.68,
+      "removals": 0,
+      "discounts": 0.0
+    },
+    {
+      "user_name": "ARIEL",
+      "orders": 4084,
+      "revenue": 105068740.05,
+      "avg_ticket": 25726.92,
+      "removals": 0,
+      "discounts": 0.0
+    },
+    {
+      "user_name": "Pablo sosa",
+      "orders": 2247,
+      "revenue": 84903105.0,
+      "avg_ticket": 37785.09,
+      "removals": 0,
+      "discounts": 0.0
+    },
+    {
+      "user_name": "Acosta",
+      "orders": 3458,
+      "revenue": 84588945.4,
+      "avg_ticket": 24461.81,
+      "removals": 0,
+      "discounts": 0.0
+    },
+    {
+      "user_name": "SERGIO M",
+      "orders": 3978,
+      "revenue": 80827285.51,
+      "avg_ticket": 20318.57,
+      "removals": 0,
+      "discounts": 0.0
+    },
+    {
+      "user_name": "PABLO PETROSELLI",
+      "orders": 2060,
+      "revenue": 67699200.01,
+      "avg_ticket": 32863.69,
+      "removals": 0,
+      "discounts": 0.0
+    },
+    {
+      "user_name": "Pablo petroselli",
+      "orders": 1917,
+      "revenue": 66677910.0,
+      "avg_ticket": 34782.43,
+      "removals": 0,
+      "discounts": 0.0
+    },
+    {
+      "user_name": "luciana paz",
+      "orders": 2778,
+      "revenue": 66572608.78,
+      "avg_ticket": 23964.22,
+      "removals": 0,
+      "discounts": 0.0
+    },
+    {
+      "user_name": "cynthia frias",
+      "orders": 2308,
+      "revenue": 63579210.35,
+      "avg_ticket": 27547.32,
+      "removals": 0,
+      "discounts": 0.0
+    },
+    {
+      "user_name": "Vanesa peralta",
+      "orders": 1633,
+      "revenue": 54813179.88,
+      "avg_ticket": 33565.94,
+      "removals": 0,
+      "discounts": 0.0
+    },
+    {
+      "user_name": "luis perez",
+      "orders": 1963,
+      "revenue": 49799200.0,
+      "avg_ticket": 25368.93,
+      "removals": 0,
+      "discounts": 0.0
+    },
+    {
+      "user_name": "Sol Elias",
+      "orders": 1464,
+      "revenue": 48565610.0,
+      "avg_ticket": 33173.23,
+      "removals": 0,
+      "discounts": 0.0
+    },
+    {
+      "user_name": "PABLO SOSA",
+      "orders": 1472,
+      "revenue": 48381665.01,
+      "avg_ticket": 32867.98,
+      "removals": 0,
+      "discounts": 0.0
+    },
+    {
+      "user_name": "VANESA PERALTA",
+      "orders": 1088,
+      "revenue": 35317540.04,
+      "avg_ticket": 32460.97,
+      "removals": 0,
+      "discounts": 0.0
+    },
+    {
+      "user_name": "Luciana paz",
+      "orders": 1341,
+      "revenue": 34208169.77,
+      "avg_ticket": 25509.45,
+      "removals": 0,
+      "discounts": 0.0
+    },
+    {
+      "user_name": "Luis perez",
+      "orders": 978,
+      "revenue": 29021760.0,
+      "avg_ticket": 29674.6,
+      "removals": 0,
+      "discounts": 0.0
+    },
+    {
+      "user_name": "NICOLAS",
+      "orders": 940,
+      "revenue": 28153838.67,
+      "avg_ticket": 29950.89,
+      "removals": 935,
+      "discounts": 2508051.61
+    },
+    {
+      "user_name": "sol elias",
+      "orders": 806,
+      "revenue": 21368640.0,
+      "avg_ticket": 26511.96,
+      "removals": 0,
+      "discounts": 0.0
+    },
+    {
+      "user_name": "Luciana Paz",
+      "orders": 541,
+      "revenue": 14054330.17,
+      "avg_ticket": 25978.43,
+      "removals": 0,
+      "discounts": 0.0
+    },
+    {
+      "user_name": "GABRIEL",
+      "orders": 599,
+      "revenue": 13562801.38,
+      "avg_ticket": 22642.41,
+      "removals": 678,
+      "discounts": 1838838.85
+    },
+    {
+      "user_name": "LUIS PEREZ",
+      "orders": 568,
+      "revenue": 12093300.0,
+      "avg_ticket": 21291.02,
+      "removals": 0,
+      "discounts": 0.0
+    },
+    {
+      "user_name": "LUCIANA PAZ",
+      "orders": 495,
+      "revenue": 11227160.1,
+      "avg_ticket": 22681.13,
+      "removals": 0,
+      "discounts": 0.0
+    },
+    {
+      "user_name": "WALTER",
+      "orders": 398,
+      "revenue": 10467981.53,
+      "avg_ticket": 26301.46,
+      "removals": 393,
+      "discounts": 599275.04
+    },
+    {
+      "user_name": "SANDRA",
+      "orders": 567,
+      "revenue": 10400057.57,
+      "avg_ticket": 18342.25,
+      "removals": 527,
+      "discounts": 1073432.87
+    },
+    {
+      "user_name": "Sergio M",
+      "orders": 370,
+      "revenue": 10065300.07,
+      "avg_ticket": 27203.51,
+      "removals": 0,
+      "discounts": 0.0
+    },
+    {
+      "user_name": "paulo gerez",
+      "orders": 224,
+      "revenue": 5452100.0,
+      "avg_ticket": 24339.73,
+      "removals": 0,
+      "discounts": 0.0
+    },
+    {
+      "user_name": "SERGIO",
+      "orders": 234,
+      "revenue": 5125437.76,
+      "avg_ticket": 21903.58,
+      "removals": 275,
+      "discounts": 488037.25
+    },
+    {
+      "user_name": "GABRIEL MONTI",
+      "orders": 160,
+      "revenue": 3995200.0,
+      "avg_ticket": 24970.0,
+      "removals": 0,
+      "discounts": 0.0
+    },
+    {
+      "user_name": "Paulo Gerez",
+      "orders": 97,
+      "revenue": 2428700.0,
+      "avg_ticket": 25038.14,
+      "removals": 0,
+      "discounts": 0.0
+    },
+    {
+      "user_name": "tablet",
+      "orders": 99,
+      "revenue": 1852850.23,
+      "avg_ticket": 18715.66,
+      "removals": 0,
+      "discounts": 0.0
+    },
+    {
+      "user_name": "Ariel",
+      "orders": 38,
+      "revenue": 804500.0,
+      "avg_ticket": 21171.05,
+      "removals": 0,
+      "discounts": 0.0
+    },
+    {
+      "user_name": "NACHO",
+      "orders": 39,
+      "revenue": 728239.9,
+      "avg_ticket": 18672.82,
+      "removals": 47,
+      "discounts": 87095.1
+    },
+    {
+      "user_name": "Cynthia frias",
+      "orders": 26,
+      "revenue": 633300.0,
+      "avg_ticket": 24357.69,
+      "removals": 0,
+      "discounts": 0.0
+    },
+    {
+      "user_name": "SOL ELIAS",
+      "orders": 33,
+      "revenue": 561900.0,
+      "avg_ticket": 17027.27,
+      "removals": 0,
+      "discounts": 0.0
+    },
+    {
+      "user_name": "ANDRES",
+      "orders": 2,
+      "revenue": 112801.0,
+      "avg_ticket": 56400.5,
+      "removals": 2,
+      "discounts": 0.0
+    }
+  ],
+  "audit_summary": {
+    "removed_items": {
+      "count": 2860,
+      "total_amount": 24757246.81,
+      "late_count": 1381,
+      "late_amount": 12457773.39,
+      "by_user": [
+        {
+          "user": "NICOLAS",
+          "count": 935,
+          "amount": 8485273.82
+        },
+        {
+          "user": "GABRIEL",
+          "count": 678,
+          "amount": 5804199.28
+        },
+        {
+          "user": "SANDRA",
+          "count": 527,
+          "amount": 4408199.4
+        },
+        {
+          "user": "WALTER",
+          "count": 393,
+          "amount": 3109649.61
+        },
+        {
+          "user": "SERGIO",
+          "count": 275,
+          "amount": 2531599.76
+        },
+        {
+          "user": "NACHO",
+          "count": 47,
+          "amount": 403224.94
+        },
+        {
+          "user": "PAULO",
+          "count": 3,
+          "amount": 11800.0
+        },
+        {
+          "user": "ANDRES",
+          "count": 2,
+          "amount": 3300.0
+        }
+      ],
+      "top_observations": [
+        {
+          "obs": "X",
+          "count": 1944
+        },
+        {
+          "obs": "x",
+          "count": 227
+        },
+        {
+          "obs": "PROMO",
+          "count": 78
+        },
+        {
+          "obs": "CAMBIO",
+          "count": 30
+        },
+        {
+          "obs": "NO HAY",
+          "count": 25
+        },
+        {
+          "obs": "NO",
+          "count": 22
+        },
+        {
+          "obs": "C",
+          "count": 20
+        },
+        {
+          "obs": "DUPLICADA",
+          "count": 15
+        },
+        {
+          "obs": "CAM",
+          "count": 14
+        },
+        {
+          "obs": "S",
+          "count": 14
+        },
+        {
+          "obs": "D",
+          "count": 13
+        },
+        {
+          "obs": "G",
+          "count": 12
+        },
+        {
+          "obs": "F",
+          "count": 12
+        },
+        {
+          "obs": "SIN STOCK",
+          "count": 9
+        },
+        {
+          "obs": "Z",
+          "count": 9
+        }
+      ],
+      "suspicious_obs_count": 2179,
+      "suspicious_obs_amount": 18308797.38
+    },
+    "discounts": {
+      "count": 1367,
+      "total_amount": 6594730.72,
+      "by_user": [
+        {
+          "user": "NICOLAS",
+          "count": 525,
+          "amount": 2508051.61
+        },
+        {
+          "user": "GABRIEL",
+          "count": 302,
+          "amount": 1838838.85
+        },
+        {
+          "user": "SANDRA",
+          "count": 262,
+          "amount": 1073432.87
+        },
+        {
+          "user": "WALTER",
+          "count": 161,
+          "amount": 599275.04
+        },
+        {
+          "user": "SERGIO",
+          "count": 89,
+          "amount": 488037.25
+        },
+        {
+          "user": "NACHO",
+          "count": 28,
+          "amount": 87095.1
+        }
+      ]
+    },
+    "prices": {
+      "count": 671,
+      "total_amount": 2004482.65,
+      "by_user": [
+        {
+          "user": "NICOLAS",
+          "count": 368,
+          "amount": 681665.68
+        },
+        {
+          "user": "GABRIEL",
+          "count": 147,
+          "amount": 316080.0
+        },
+        {
+          "user": "SANDRA",
+          "count": 85,
+          "amount": 146879.99
+        },
+        {
+          "user": "SERGIO",
+          "count": 37,
+          "amount": 718039.99
+        },
+        {
+          "user": "WALTER",
+          "count": 16,
+          "amount": 16500.0
+        },
+        {
+          "user": "NACHO",
+          "count": 15,
+          "amount": 115419.99
+        },
+        {
+          "user": "ANDRES",
+          "count": 3,
+          "amount": 9897.0
+        }
+      ]
+    },
+    "quantities": {
+      "count": 734,
+      "total_amount": 4033249.45,
+      "by_user": [
+        {
+          "user": "NICOLAS",
+          "count": 251,
+          "amount": 1343274.75
+        },
+        {
+          "user": "SANDRA",
+          "count": 144,
+          "amount": 920599.91
+        },
+        {
+          "user": "GABRIEL",
+          "count": 139,
+          "amount": 738699.9
+        },
+        {
+          "user": "WALTER",
+          "count": 103,
+          "amount": 537999.96
+        },
+        {
+          "user": "SERGIO",
+          "count": 85,
+          "amount": 433049.95
+        },
+        {
+          "user": "NACHO",
+          "count": 12,
+          "amount": 59624.98
+        }
+      ]
+    },
+    "payment_type_changes": {
+      "count": 11587,
+      "by_user": [
+        {
+          "user": "NICOLAS",
+          "count": 5147,
+          "total_amount": 246403130.02
+        },
+        {
+          "user": "GABRIEL",
+          "count": 2592,
+          "total_amount": 129848330.81
+        },
+        {
+          "user": "WALTER",
+          "count": 1540,
+          "total_amount": 65094350.53
+        },
+        {
+          "user": "SANDRA",
+          "count": 1473,
+          "total_amount": 44999172.3
+        },
+        {
+          "user": "SERGIO",
+          "count": 693,
+          "total_amount": 37858268.44
+        },
+        {
+          "user": "NACHO",
+          "count": 135,
+          "total_amount": 4250760.1
+        },
+        {
+          "user": "PAULO",
+          "count": 4,
+          "total_amount": 109600.0
+        },
+        {
+          "user": "ANDRES",
+          "count": 3,
+          "total_amount": 55900.0
+        }
+      ]
+    },
+    "inactivations": {
+      "count": 1077,
+      "by_user": [
+        {
+          "user": "GABRIEL",
+          "count": 354
+        },
+        {
+          "user": "NICOLAS",
+          "count": 320
+        },
+        {
+          "user": "WALTER",
+          "count": 200
+        },
+        {
+          "user": "SANDRA",
+          "count": 116
+        },
+        {
+          "user": "SERGIO",
+          "count": 68
+        },
+        {
+          "user": "NACHO",
+          "count": 18
+        },
+        {
+          "user": "ANDRES",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "notable_findings": [
+    "QUITAS: 2,860 ítems removidos. Top removedor: NICOLAS con 935 quitas por $8,485,274 ARS.",
+    "QUITAS TARDÍAS: 1,381 quitas ocurrieron más de 15 minutos después del inicio del pedido (posible ítem ya elaborado). Total: $12,457,773 ARS.",
+    "OBSERVACIONES SOSPECHOSAS: 2,179 quitas tienen observación vacía o solo 'X', sin justificación real. Total: $18,308,797 ARS.",
+    "CAMBIOS DE PAGO: 11,587 cambios de tipo de pago registrados. Top: NICOLAS con 5,147 cambios por $0 ARS.",
+    "DESCUENTOS: 1,367 descuentos aplicados totalizando $6,594,731 ARS. Top: NICOLAS con 525 descuentos.",
+    "DELIVERY SOSPECHOSO: hay 1.166 cambios de descuento en delivery para solo 1.312 órdenes de delivery (casi 1 descuento por cada orden de delivery).",
+    "RETIROS DE CAJA: $634,004,636 ARS retirados en 4,315 operaciones.",
+    "DEUDA CLIENTES: el cliente 'FAMILIA / AMIGOS' tiene un saldo negativo de $26,252,600 ARS."
+  ],
+  "suspicious_patterns": {
+    "high_removal_users": [
+      {
+        "user": "NICOLAS",
+        "count": 935,
+        "amount": 8485273.82
+      },
+      {
+        "user": "GABRIEL",
+        "count": 678,
+        "amount": 5804199.28
+      },
+      {
+        "user": "SANDRA",
+        "count": 527,
+        "amount": 4408199.4
+      },
+      {
+        "user": "WALTER",
+        "count": 393,
+        "amount": 3109649.61
+      },
+      {
+        "user": "SERGIO",
+        "count": 275,
+        "amount": 2531599.76
+      }
+    ],
+    "late_removals_count": 0,
+    "late_removals_amount": 0,
+    "late_removals_by_user": [],
+    "suspicious_obs_count": 0,
+    "payment_changes_per_user": [
+      {
+        "user": "NICOLAS",
+        "count": 5147,
+        "total_amount": 246403130.02
+      },
+      {
+        "user": "GABRIEL",
+        "count": 2592,
+        "total_amount": 129848330.81
+      },
+      {
+        "user": "WALTER",
+        "count": 1540,
+        "total_amount": 65094350.53
+      },
+      {
+        "user": "SANDRA",
+        "count": 1473,
+        "total_amount": 44999172.3
+      },
+      {
+        "user": "SERGIO",
+        "count": 693,
+        "total_amount": 37858268.44
+      },
+      {
+        "user": "NACHO",
+        "count": 135,
+        "total_amount": 4250760.1
+      },
+      {
+        "user": "PAULO",
+        "count": 4,
+        "total_amount": 109600.0
+      },
+      {
+        "user": "ANDRES",
+        "count": 3,
+        "total_amount": 55900.0
+      }
+    ],
+    "frequent_cancelers": [
+      {
+        "user": "GABRIEL",
+        "count": 354
+      },
+      {
+        "user": "NICOLAS",
+        "count": 320
+      },
+      {
+        "user": "WALTER",
+        "count": 200
+      },
+      {
+        "user": "SANDRA",
+        "count": 116
+      },
+      {
+        "user": "SERGIO",
+        "count": 68
+      },
+      {
+        "user": "NACHO",
+        "count": 18
+      },
+      {
+        "user": "ANDRES",
+        "count": 1
+      }
+    ],
+    "large_discounts": [
+      {
+        "id": 307,
+        "order_id": "35327",
+        "date_time": "2026-04-10T23:38:57",
+        "user_name": "NICOLAS",
+        "total": 2049.0,
+        "discount_percentage": 85.36,
+        "discount": 11951.0,
+        "source": "delivery"
+      },
+      {
+        "id": 1027,
+        "order_id": "51918",
+        "date_time": "2026-06-14T21:42:30",
+        "user_name": "GABRIEL",
+        "total": 7829.91,
+        "discount_percentage": 60.45,
+        "discount": 11970.09,
+        "source": "delivery"
+      },
+      {
+        "id": 1045,
+        "order_id": "52192",
+        "date_time": "2026-06-16T13:27:36",
+        "user_name": "SANDRA",
+        "total": 7959.94,
+        "discount_percentage": 58.54,
+        "discount": 11240.06,
+        "source": "delivery"
+      },
+      {
+        "id": 1034,
+        "order_id": "52096",
+        "date_time": "2026-06-15T20:25:18",
+        "user_name": "SERGIO",
+        "total": 8490.0,
+        "discount_percentage": 56.23,
+        "discount": 10910.0,
+        "source": "delivery"
+      },
+      {
+        "id": 1052,
+        "order_id": "52270",
+        "date_time": "2026-06-16T20:42:48",
+        "user_name": "NICOLAS",
+        "total": 8479.93,
+        "discount_percentage": 54.89,
+        "discount": 10320.07,
+        "source": "delivery"
+      },
+      {
+        "id": 1021,
+        "order_id": "51859",
+        "date_time": "2026-06-14T15:46:13",
+        "user_name": "GABRIEL",
+        "total": 8220.0,
+        "discount_percentage": 54.83,
+        "discount": 9980.0,
+        "source": "delivery"
+      },
+      {
+        "id": 1032,
+        "order_id": "52029",
+        "date_time": "2026-06-15T14:52:03",
+        "user_name": "WALTER",
+        "total": 7959.95,
+        "discount_percentage": 54.77,
+        "discount": 9640.04,
+        "source": "delivery"
+      },
+      {
+        "id": 1037,
+        "order_id": "52107",
+        "date_time": "2026-06-15T22:11:21",
+        "user_name": "NICOLAS",
+        "total": 7959.95,
+        "discount_percentage": 54.77,
+        "discount": 9640.04,
+        "source": "delivery"
+      },
+      {
+        "id": 58,
+        "order_id": "27542",
+        "date_time": "2026-03-14T08:23:19",
+        "user_name": "SANDRA",
+        "total": 12400.1,
+        "discount_percentage": 54.62,
+        "discount": 12400.1,
+        "source": "restaurant"
+      },
+      {
+        "id": 1063,
+        "order_id": "52285",
+        "date_time": "2026-06-16T22:22:24",
+        "user_name": "NICOLAS",
+        "total": 7609.94,
+        "discount_percentage": 54.15,
+        "discount": 8990.06,
+        "source": "delivery"
+      }
+    ]
+  },
+  "proveedores": {
+    "total_count": 273,
+    "with_purchases_count": 75,
+    "total_purchases_amount": 2262,
+    "list": [
+      {
+        "name": "CARNICERIA LA BANDA",
+        "cuit": "30-70752199-2",
+        "code": "25",
+        "party_id": "143",
+        "tax_condition": "Desconocido",
+        "purchase_count": 51,
+        "purchase_total": 81066720.81,
+        "balance": -3164364.31
+      },
+      {
+        "name": "DISTRIBUIDORA LOS GARCIA",
+        "cuit": "30-71738032-7",
+        "code": "231",
+        "party_id": "1103",
+        "tax_condition": "Desconocido",
+        "purchase_count": 72,
+        "purchase_total": 73892871.27,
+        "balance": -3037267.64
+      },
+      {
+        "name": "CABRALES",
+        "cuit": "30-53774574-2",
+        "code": "228",
+        "party_id": "1075",
+        "tax_condition": "Desconocido",
+        "purchase_count": 26,
+        "purchase_total": 59262918.55,
+        "balance": -7244897.42
+      },
+      {
+        "name": "CUATRIS CARNICERIA",
+        "cuit": "30-70765747-9",
+        "code": "266",
+        "party_id": "1375",
+        "tax_condition": "Desconocido",
+        "purchase_count": 56,
+        "purchase_total": 41639503.19,
+        "balance": -4326526.57
+      },
+      {
+        "name": "SAWA SAS",
+        "cuit": "30-71764580-0",
+        "code": "164",
+        "party_id": "551",
+        "tax_condition": "Desconocido",
+        "purchase_count": 123,
+        "purchase_total": 40129889.8,
+        "balance": -2979889.84
+      },
+      {
+        "name": "D Y D",
+        "cuit": "",
+        "code": "38",
+        "party_id": "156",
+        "tax_condition": "Desconocido",
+        "purchase_count": 249,
+        "purchase_total": 39502000.0,
+        "balance": -1679000.0
+      },
+      {
+        "name": "JRB LOGISTICA SRL",
+        "cuit": "30-71095849-8",
+        "code": "44",
+        "party_id": "162",
+        "tax_condition": "Desconocido",
+        "purchase_count": 46,
+        "purchase_total": 33788283.79,
+        "balance": -1710062.55
+      },
+      {
+        "name": "JAVIER ARROYO- AC SOLUC.GASTRONOMICAS",
+        "cuit": "23-30835422-9",
+        "code": "71",
+        "party_id": "189",
+        "tax_condition": "Desconocido",
+        "purchase_count": 150,
+        "purchase_total": 32553485.97,
+        "balance": -3447188.33
+      },
+      {
+        "name": "AGUSTIN SISTEMA",
+        "cuit": "20-39730823-6",
+        "code": "162",
+        "party_id": "544",
+        "tax_condition": "Desconocido",
+        "purchase_count": 8,
+        "purchase_total": 30650000.0,
+        "balance": -24300000.0
+      },
+      {
+        "name": "EDET EMPRESA DE DISTRIBUCION ELECTRICA DE TUCUMAN",
+        "cuit": "30-65865024-2",
+        "code": "41",
+        "party_id": "159",
+        "tax_condition": "Desconocido",
+        "purchase_count": 4,
+        "purchase_total": 18016390.0,
+        "balance": -4667610.0
+      },
+      {
+        "name": "SALTA REFRESCOS",
+        "cuit": "30-51840868-9",
+        "code": "13",
+        "party_id": "131",
+        "tax_condition": "Desconocido",
+        "purchase_count": 42,
+        "purchase_total": 17011992.85,
+        "balance": 0.0
+      },
+      {
+        "name": "CARNICERIA NN",
+        "cuit": "30-10244653-0",
+        "code": "262",
+        "party_id": "1364",
+        "tax_condition": "Desconocido",
+        "purchase_count": 27,
+        "purchase_total": 16506426.99,
+        "balance": -847.0
+      },
+      {
+        "name": "SOTELO SEGURIDAD",
+        "cuit": "",
+        "code": "126",
+        "party_id": "322",
+        "tax_condition": "Desconocido",
+        "purchase_count": 253,
+        "purchase_total": 15192400.0,
+        "balance": -12000.0
+      },
+      {
+        "name": "DISCOMEF SRL",
+        "cuit": "33-71803354-9",
+        "code": "256",
+        "party_id": "1344",
+        "tax_condition": "Desconocido",
+        "purchase_count": 46,
+        "purchase_total": 14138286.88,
+        "balance": 0.0
+      },
+      {
+        "name": "HARITUC",
+        "cuit": "30-71519608-1",
+        "code": "15",
+        "party_id": "133",
+        "tax_condition": "Desconocido",
+        "purchase_count": 64,
+        "purchase_total": 12744280.67,
+        "balance": 0.0
+      },
+      {
+        "name": "POLLOS BONNIN",
+        "cuit": "",
+        "code": "137",
+        "party_id": "353",
+        "tax_condition": "Desconocido",
+        "purchase_count": 40,
+        "purchase_total": 12184500.0,
+        "balance": -784500.0
+      },
+      {
+        "name": "EL MUNDO",
+        "cuit": "30-70771092-2",
+        "code": "10",
+        "party_id": "128",
+        "tax_condition": "Desconocido",
+        "purchase_count": 78,
+        "purchase_total": 12003230.05,
+        "balance": -180330.0
+      },
+      {
+        "name": "PABLO REYES CAFE",
+        "cuit": "",
+        "code": "268",
+        "party_id": "1388",
+        "tax_condition": "Desconocido",
+        "purchase_count": 21,
+        "purchase_total": 11822000.0,
+        "balance": -1622000.0
+      },
+      {
+        "name": "BUBY HIELO",
+        "cuit": "20-36585660-6",
+        "code": "20",
+        "party_id": "138",
+        "tax_condition": "Desconocido",
+        "purchase_count": 165,
+        "purchase_total": 11589125.56,
+        "balance": -1939125.56
+      },
+      {
+        "name": "DANIEL REGIONALES",
+        "cuit": "",
+        "code": "56",
+        "party_id": "174",
+        "tax_condition": "Desconocido",
+        "purchase_count": 52,
+        "purchase_total": 11016147.0,
+        "balance": -3366147.0
+      },
+      {
+        "name": "SEMILLERIA ESTEBAN",
+        "cuit": "",
+        "code": "43",
+        "party_id": "161",
+        "tax_condition": "Desconocido",
+        "purchase_count": 21,
+        "purchase_total": 10391717.0,
+        "balance": -4600917.0
+      },
+      {
+        "name": "GLEFYC",
+        "cuit": "30-71174743-1",
+        "code": "233",
+        "party_id": "1119",
+        "tax_condition": "Desconocido",
+        "purchase_count": 58,
+        "purchase_total": 9435292.01,
+        "balance": -628099.15
+      },
+      {
+        "name": "CERVECERIA Y MALTERIA QUILMES",
+        "cuit": "33-50835825-9",
+        "code": "4",
+        "party_id": "122",
+        "tax_condition": "Desconocido",
+        "purchase_count": 18,
+        "purchase_total": 8662821.57,
+        "balance": 0.0
+      },
+      {
+        "name": "ALEM 500",
+        "cuit": "30-59942146-3",
+        "code": "148",
+        "party_id": "444",
+        "tax_condition": "Desconocido",
+        "purchase_count": 34,
+        "purchase_total": 7407730.69,
+        "balance": -4.61
+      },
+      {
+        "name": "ALLFROZEN",
+        "cuit": "",
+        "code": "48",
+        "party_id": "166",
+        "tax_condition": "Desconocido",
+        "purchase_count": 32,
+        "purchase_total": 6451599.0,
+        "balance": -1341599.0
+      },
+      {
+        "name": "AVICOLA TMBO",
+        "cuit": "30-53774574-2",
+        "code": "265",
+        "party_id": "1371",
+        "tax_condition": "Desconocido",
+        "purchase_count": 18,
+        "purchase_total": 6372077.73,
+        "balance": -1072077.7
+      },
+      {
+        "name": "ALMASA",
+        "cuit": "30-71771324-5",
+        "code": "258",
+        "party_id": "1351",
+        "tax_condition": "Desconocido",
+        "purchase_count": 18,
+        "purchase_total": 6184171.65,
+        "balance": 0.0
+      },
+      {
+        "name": "GALIA SRL",
+        "cuit": "30-71503458-8",
+        "code": "251",
+        "party_id": "1274",
+        "tax_condition": "Desconocido",
+        "purchase_count": 26,
+        "purchase_total": 6007754.15,
+        "balance": -1355253.19
+      },
+      {
+        "name": "PULPO AZUL",
+        "cuit": "20-36867643-9",
+        "code": "225",
+        "party_id": "1060",
+        "tax_condition": "Desconocido",
+        "purchase_count": 48,
+        "purchase_total": 5773549.5,
+        "balance": -643549.48
+      },
+      {
+        "name": "LA GACETA",
+        "cuit": "",
+        "code": "188",
+        "party_id": "778",
+        "tax_condition": "Desconocido",
+        "purchase_count": 54,
+        "purchase_total": 5625800.0,
+        "balance": 0.0
+      },
+      {
+        "name": "NORMA CONTADORA",
+        "cuit": "",
+        "code": "184",
+        "party_id": "771",
+        "tax_condition": "Desconocido",
+        "purchase_count": 22,
+        "purchase_total": 5490000.0,
+        "balance": 0.0
+      },
+      {
+        "name": "LAMADRID DISTR",
+        "cuit": "30-59942146-3",
+        "code": "267",
+        "party_id": "1378",
+        "tax_condition": "Desconocido",
+        "purchase_count": 22,
+        "purchase_total": 5233846.0,
+        "balance": -183400.0
+      },
+      {
+        "name": "NICO CARPINTERO",
+        "cuit": "20-40113344-6",
+        "code": "263",
+        "party_id": "1366",
+        "tax_condition": "Desconocido",
+        "purchase_count": 9,
+        "purchase_total": 5165000.0,
+        "balance": -1378000.0
+      },
+      {
+        "name": "MERCADO",
+        "cuit": "20-36867643-9",
+        "code": "226",
+        "party_id": "1064",
+        "tax_condition": "Desconocido",
+        "purchase_count": 34,
+        "purchase_total": 4558307.29,
+        "balance": 0.0
+      },
+      {
+        "name": "MAKRO MAYORISTA",
+        "cuit": "30-58962149-9",
+        "code": "273",
+        "party_id": "1591",
+        "tax_condition": "Desconocido",
+        "purchase_count": 11,
+        "purchase_total": 4340294.4,
+        "balance": -4340290.87
+      },
+      {
+        "name": "LEZAMA ABOGADA",
+        "cuit": "",
+        "code": "185",
+        "party_id": "772",
+        "tax_condition": "Desconocido",
+        "purchase_count": 15,
+        "purchase_total": 4200000.0,
+        "balance": 0.0
+      },
+      {
+        "name": "MG DISTRIBUIDORA",
+        "cuit": "",
+        "code": "240",
+        "party_id": "1215",
+        "tax_condition": "Desconocido",
+        "purchase_count": 11,
+        "purchase_total": 3902800.0,
+        "balance": 0.0
+      },
+      {
+        "name": "BODEGA LA RURAL",
+        "cuit": "30-52719611-2",
+        "code": "68",
+        "party_id": "186",
+        "tax_condition": "Desconocido",
+        "purchase_count": 13,
+        "purchase_total": 3675962.99,
+        "balance": -1995962.98
+      },
+      {
+        "name": "PORCI GROUP",
+        "cuit": "30-71894151-9",
+        "code": "270",
+        "party_id": "1391",
+        "tax_condition": "Desconocido",
+        "purchase_count": 17,
+        "purchase_total": 3569852.0,
+        "balance": -601260.0
+      },
+      {
+        "name": "GASNOR",
+        "cuit": "30-65786572-5",
+        "code": "49",
+        "party_id": "167",
+        "tax_condition": "Desconocido",
+        "purchase_count": 2,
+        "purchase_total": 3504612.09,
+        "balance": -2210795.04
+      },
+      {
+        "name": "PINTURAS AUGUSTO",
+        "cuit": "30-71895485-8",
+        "code": "274",
+        "party_id": "1804",
+        "tax_condition": "Desconocido",
+        "purchase_count": 1,
+        "purchase_total": 3300000.0,
+        "balance": -1350000.0
+      },
+      {
+        "name": "BOREAL",
+        "cuit": "",
+        "code": "120",
+        "party_id": "315",
+        "tax_condition": "Desconocido",
+        "purchase_count": 1,
+        "purchase_total": 3239508.0,
+        "balance": 0.0
+      },
+      {
+        "name": "MARQUEZ RICARDO DANIEL",
+        "cuit": "20-25735740-7",
+        "code": "14",
+        "party_id": "132",
+        "tax_condition": "Desconocido",
+        "purchase_count": 22,
+        "purchase_total": 3148120.01,
+        "balance": -238120.0
+      },
+      {
+        "name": "SHARE OUT S.R.L.- via gastronomica",
+        "cuit": "30-70853686-1",
+        "code": "97",
+        "party_id": "250",
+        "tax_condition": "Desconocido",
+        "purchase_count": 18,
+        "purchase_total": 2945076.33,
+        "balance": 0.01
+      },
+      {
+        "name": "ELECTRICIDAD PROYECTO NUEVO",
+        "cuit": "",
+        "code": "249",
+        "party_id": "1257",
+        "tax_condition": "Desconocido",
+        "purchase_count": 2,
+        "purchase_total": 2850000.0,
+        "balance": 0.0
+      },
+      {
+        "name": "JULIO MARTIN VAJILLAS",
+        "cuit": "23-12414186-9",
+        "code": "103",
+        "party_id": "274",
+        "tax_condition": "Desconocido",
+        "purchase_count": 9,
+        "purchase_total": 2283540.17,
+        "balance": 0.0
+      },
+      {
+        "name": "CARNES FALITO",
+        "cuit": "30-71894151-9",
+        "code": "272",
+        "party_id": "1393",
+        "tax_condition": "Desconocido",
+        "purchase_count": 7,
+        "purchase_total": 2204990.0,
+        "balance": 0.0
+      },
+      {
+        "name": "PRODUCTOS SIN TACC",
+        "cuit": "",
+        "code": "106",
+        "party_id": "281",
+        "tax_condition": "Desconocido",
+        "purchase_count": 31,
+        "purchase_total": 1880000.0,
+        "balance": 0.0
+      },
+      {
+        "name": "PLASTIPREN SCA",
+        "cuit": "30-51773474-4",
+        "code": "261",
+        "party_id": "1361",
+        "tax_condition": "Desconocido",
+        "purchase_count": 1,
+        "purchase_total": 1879372.8,
+        "balance": 0.0
+      },
+      {
+        "name": "JUAN GRAMAJO",
+        "cuit": "",
+        "code": "77",
+        "party_id": "195",
+        "tax_condition": "Desconocido",
+        "purchase_count": 5,
+        "purchase_total": 1700000.0,
+        "balance": -350000.0
+      },
+      {
+        "name": "PURATUC",
+        "cuit": "30-71184269-8",
+        "code": "271",
+        "party_id": "1392",
+        "tax_condition": "Desconocido",
+        "purchase_count": 9,
+        "purchase_total": 1694649.96,
+        "balance": -894649.96
+      },
+      {
+        "name": "DAVID RATIONAL",
+        "cuit": "20-36867643-9",
+        "code": "191",
+        "party_id": "800",
+        "tax_condition": "Desconocido",
+        "purchase_count": 5,
+        "purchase_total": 1680773.0,
+        "balance": -692000.0
+      },
+      {
+        "name": "CARTON DEL TUCUAMN SA",
+        "cuit": "33-69721140-9",
+        "code": "269",
+        "party_id": "1390",
+        "tax_condition": "Desconocido",
+        "purchase_count": 1,
+        "purchase_total": 1590577.72,
+        "balance": 0.0
+      },
+      {
+        "name": "BODEGAS BUDEGUER SA",
+        "cuit": "30-71024463-0",
+        "code": "89",
+        "party_id": "206",
+        "tax_condition": "Desconocido",
+        "purchase_count": 11,
+        "purchase_total": 1446114.51,
+        "balance": -725436.6
+      },
+      {
+        "name": "PEDRERA",
+        "cuit": "",
+        "code": "235",
+        "party_id": "1138",
+        "tax_condition": "Desconocido",
+        "purchase_count": 8,
+        "purchase_total": 1413120.0,
+        "balance": 0.0
+      },
+      {
+        "name": "HELATUC",
+        "cuit": "30-51840868-9",
+        "code": "264",
+        "party_id": "1369",
+        "tax_condition": "Desconocido",
+        "purchase_count": 5,
+        "purchase_total": 1387720.93,
+        "balance": -97720.93
+      },
+      {
+        "name": "MUNDO BEBIDAS",
+        "cuit": "20-25542441-7",
+        "code": "7",
+        "party_id": "125",
+        "tax_condition": "Desconocido",
+        "purchase_count": 5,
+        "purchase_total": 1347096.63,
+        "balance": 0.0
+      },
+      {
+        "name": "AQA",
+        "cuit": "",
+        "code": "239",
+        "party_id": "1189",
+        "tax_condition": "Desconocido",
+        "purchase_count": 1,
+        "purchase_total": 1268200.0,
+        "balance": -168200.0
+      },
+      {
+        "name": "IPLA",
+        "cuit": "",
+        "code": "110",
+        "party_id": "293",
+        "tax_condition": "Desconocido",
+        "purchase_count": 1,
+        "purchase_total": 1174200.0,
+        "balance": -705200.0
+      },
+      {
+        "name": "HERRERO GUSTAVO",
+        "cuit": "",
+        "code": "139",
+        "party_id": "367",
+        "tax_condition": "Desconocido",
+        "purchase_count": 1,
+        "purchase_total": 1070000.0,
+        "balance": -1070000.0
+      },
+      {
+        "name": "AIRE ACOND - RASKA",
+        "cuit": "",
+        "code": "177",
+        "party_id": "715",
+        "tax_condition": "Desconocido",
+        "purchase_count": 1,
+        "purchase_total": 960000.0,
+        "balance": 0.0
+      },
+      {
+        "name": "CRETO",
+        "cuit": "33-70955409-9",
+        "code": "222",
+        "party_id": "1024",
+        "tax_condition": "Desconocido",
+        "purchase_count": 5,
+        "purchase_total": 892118.38,
+        "balance": 0.0
+      },
+      {
+        "name": "MATAFUEGOS LIBERTAD",
+        "cuit": "",
+        "code": "248",
+        "party_id": "1255",
+        "tax_condition": "Desconocido",
+        "purchase_count": 22,
+        "purchase_total": 697000.0,
+        "balance": 0.0
+      },
+      {
+        "name": "JORGE MARIO RODRIGUEZ",
+        "cuit": "",
+        "code": "236",
+        "party_id": "1143",
+        "tax_condition": "Desconocido",
+        "purchase_count": 1,
+        "purchase_total": 530000.0,
+        "balance": 0.0
+      },
+      {
+        "name": "RED DE  SEGUROS",
+        "cuit": "",
+        "code": "168",
+        "party_id": "570",
+        "tax_condition": "Desconocido",
+        "purchase_count": 1,
+        "purchase_total": 437939.22,
+        "balance": -437939.22
+      },
+      {
+        "name": "CARNICERIA HAIMES",
+        "cuit": "",
+        "code": "253",
+        "party_id": "1282",
+        "tax_condition": "Desconocido",
+        "purchase_count": 1,
+        "purchase_total": 421539.15,
+        "balance": 0.0
+      },
+      {
+        "name": "TOBIAS KUSEVITZKY",
+        "cuit": "",
+        "code": "224",
+        "party_id": "1039",
+        "tax_condition": "Desconocido",
+        "purchase_count": 4,
+        "purchase_total": 405674.96,
+        "balance": -40280.0
+      },
+      {
+        "name": "DISTRIBUIDORA URUGUAY",
+        "cuit": "30-56358597-4",
+        "code": "30",
+        "party_id": "148",
+        "tax_condition": "Desconocido",
+        "purchase_count": 8,
+        "purchase_total": 330723.94,
+        "balance": 0.0
+      },
+      {
+        "name": "REDES SOCIALES",
+        "cuit": "",
+        "code": "127",
+        "party_id": "324",
+        "tax_condition": "Desconocido",
+        "purchase_count": 1,
+        "purchase_total": 300000.0,
+        "balance": 0.0
+      },
+      {
+        "name": "ENVASES BAP",
+        "cuit": "30-70236594-1",
+        "code": "45",
+        "party_id": "163",
+        "tax_condition": "Desconocido",
+        "purchase_count": 10,
+        "purchase_total": 270600.0,
+        "balance": 0.0
+      },
+      {
+        "name": "JOSE CEBALLOS",
+        "cuit": "30-70787014-8",
+        "code": "244",
+        "party_id": "1239",
+        "tax_condition": "Desconocido",
+        "purchase_count": 4,
+        "purchase_total": 166887.15,
+        "balance": 0.0
+      },
+      {
+        "name": "BOD BIANCHI",
+        "cuit": "",
+        "code": "197",
+        "party_id": "833",
+        "tax_condition": "Desconocido",
+        "purchase_count": 1,
+        "purchase_total": 155662.0,
+        "balance": 0.0
+      },
+      {
+        "name": "PURATOS",
+        "cuit": "",
+        "code": "223",
+        "party_id": "1038",
+        "tax_condition": "Desconocido",
+        "purchase_count": 1,
+        "purchase_total": 87400.0,
+        "balance": 0.0
+      },
+      {
+        "name": "DRAGO TUC",
+        "cuit": "20-14226914-8",
+        "code": "257",
+        "party_id": "1345",
+        "tax_condition": "Desconocido",
+        "purchase_count": 1,
+        "purchase_total": 20000.0,
+        "balance": 0.0
+      },
+      {
+        "name": "SEMILLERIA ALTIERI",
+        "cuit": "30-64272674-5",
+        "code": "32",
+        "party_id": "150",
+        "tax_condition": "Desconocido",
+        "purchase_count": 1,
+        "purchase_total": 16000.0,
+        "balance": 0.0
+      }
+    ],
+    "without_purchases": [
+      "Prueba (CUIT: , sin compras registradas)",
+      "BIG BILL (CUIT: 20-13279718-9, sin compras registradas)",
+      "LA EUROPEA (CUIT: 30-50302040-4, sin compras registradas)",
+      "TU BUEN GUSTO (CUIT: 30-71477344-1, sin compras registradas)",
+      "EL NUEVO POLO NORTE (CUIT: 30-70235560-1, sin compras registradas)",
+      "CALI ALFREDO GERARDO (CUIT: 20-12413554-1, sin compras registradas)",
+      "ILOLAY (CUIT: 30-50160121-3, sin compras registradas)",
+      "TODO ENVASES (CUIT: 27-13628909-3, sin compras registradas)",
+      "GASTROCOMPANY SRL (CUIT: 33-71734942-9, sin compras registradas)",
+      "EMANUEL COSALTA (CUIT: , sin compras registradas)",
+      "MA COMERCIAL (CUIT: 30-69301263-1, sin compras registradas)",
+      "NORTE DISTRIBUIDORA (CUIT: 30-71401434-6, sin compras registradas)",
+      "SCHAMMAS JORGE EDUARDO (CUIT: 20-04176276-5, sin compras registradas)",
+      "PRONTO INSUMOS (CUIT: 30-71434731-0, sin compras registradas)",
+      "BUDEGUER (CUIT: 30-71024463-0, sin compras registradas)",
+      "CAFE EXPRESO (CUIT: 27-01132080-0, sin compras registradas)",
+      "EL PIONERO (CUIT: 30-71601966-3, sin compras registradas)",
+      "CACHI YACO (CUIT: 30-50740022-8, sin compras registradas)",
+      "BELLA VISTA MANUFACTURAS (CUIT: 33-70233793-9, sin compras registradas)",
+      "DIMACOL (CUIT: 30-61821770-8, sin compras registradas)",
+      "BENJAMIN GRAMAJO (CUIT: , sin compras registradas)",
+      "LA LUGUENZE SRL (CUIT: 30-69174548-8, sin compras registradas)",
+      "JAVIER ARROYO (CUIT: , sin compras registradas)",
+      "MICBELL (CUIT: , sin compras registradas)",
+      "F Y V VERDURAS (CUIT: , sin compras registradas)",
+      "SOY CHU (CUIT: , sin compras registradas)",
+      "BARRERA MIGUEL ANGEL- TUBOS (CUIT: 20-14226914-8, sin compras registradas)",
+      "PEDIDOS PARA BARRA (CUIT: , sin compras registradas)",
+      "GRANJA DON LUQUE (CUIT: , sin compras registradas)",
+      "ELECTRICISTA FACUNDO (CUIT: , sin compras registradas)",
+      "GOLDMAN SANITARIOS (CUIT: 27-13279136-3, sin compras registradas)",
+      "SODAS DE SIFON (CUIT: , sin compras registradas)",
+      "MANI ARTURO (CUIT: , sin compras registradas)",
+      "IMPRENTA (CUIT: , sin compras registradas)",
+      "MENU VIRTUAL (CUIT: , sin compras registradas)",
+      "MIGUEL REGINATTO (CUIT: , sin compras registradas)",
+      "GIOVANNI (CUIT: , sin compras registradas)",
+      "ESTABLECIMIENTO SAN GABRIEL SRL (CUIT: 30-61588721-4, sin compras registradas)",
+      "ART. DE LIMPIEZA (CUIT: , sin compras registradas)",
+      "VASO TERMICO DART. 240CC X100 (CUIT: 27-13628909-3, sin compras registradas)",
+      "RAMIRO CERDOS (CUIT: , sin compras registradas)",
+      "NINO (CUIT: , sin compras registradas)",
+      "SAN LUIS (CUIT: 33-71057780-9, sin compras registradas)",
+      "QUESOS DE TAFI (CUIT: , sin compras registradas)",
+      "SHAMI (CUIT: 33-70876516-9, sin compras registradas)",
+      "HUGO SORIA (CUIT: , sin compras registradas)",
+      "COMOTI (CUIT: , sin compras registradas)",
+      "LARIO (CUIT: 33-50052990-9, sin compras registradas)",
+      "BODEGA ESMERALDA SA (CUIT: 30-50258442-8, sin compras registradas)",
+      "PRO HIGIENE (CUIT: 30-71547007-8, sin compras registradas)",
+      "DIST SAN LUIS (CUIT: 33-71057780-9, sin compras registradas)",
+      "CHIMALE SRL (CUIT: 30-63689804-6, sin compras registradas)",
+      "PUERTO BANUS (CUIT: 27-24544458-9, sin compras registradas)",
+      "BELEN HERRERA FLANES (CUIT: 20-39138889-0, sin compras registradas)",
+      "LEANDRO HERRERA QUESOS (CUIT: 20-39077264-6, sin compras registradas)",
+      "LAS PALMAS (CUIT: , sin compras registradas)",
+      "LA FLECHA (CUIT: 30-70753182-3, sin compras registradas)",
+      "SANCHEZ EQUIPAMENT (CUIT: 27-33332230-2, sin compras registradas)",
+      "REY POLLO (CUIT: 30-71240234-9, sin compras registradas)",
+      "GUSCOPY (CUIT: 20-13511484-8, sin compras registradas)",
+      "EL MALIK (CUIT: 20-40217385-9, sin compras registradas)",
+      "ESTRACTORES - HUGO ESCOBAR (CUIT: , sin compras registradas)",
+      "FERRETERIA (CUIT: , sin compras registradas)",
+      "TECNICO DE AIRE AC. (CUIT: , sin compras registradas)",
+      "DISTRIBUIDORA 3 Y M SAS (CUIT: 30-71642384-7, sin compras registradas)",
+      "LOMAS DEL TIMBO - NARANJAS (CUIT: , sin compras registradas)",
+      "ELECTRICISTA LIZARRAGA (CUIT: , sin compras registradas)",
+      "LB REFRIGERACION (CUIT: 20-11910775-0, sin compras registradas)",
+      "CARPINTERO LUIS (CUIT: , sin compras registradas)",
+      "TRANSP. 9 DE JULIO (CUIT: , sin compras registradas)",
+      "FRUTOS ROJOS (CUIT: , sin compras registradas)",
+      "LA MISION (CUIT: 30-71042489-2, sin compras registradas)",
+      "CAINZO PEREIRA GONZALO (CUIT: 20-37312050-3, sin compras registradas)",
+      "LAS PIRAMIDES (CUIT: , sin compras registradas)",
+      "JUAN MEDINA - REPARACION (CUIT: , sin compras registradas)",
+      "MUZZA TOLDO (CUIT: , sin compras registradas)",
+      "THOMMY ESTANCIA MENDOZA (CUIT: , sin compras registradas)",
+      "CARNES PASTRANA (CUIT: , sin compras registradas)",
+      "CITRIC (CUIT: , sin compras registradas)",
+      "ALL TRADING- VERDURAS (CUIT: 30-71532485-3, sin compras registradas)",
+      "SKYNET (CUIT: 20-42524310-2, sin compras registradas)",
+      "PINTOR (CUIT: , sin compras registradas)",
+      "GASISTA TOLDOS (CUIT: , sin compras registradas)",
+      "ART - SEGURO (CUIT: , sin compras registradas)",
+      "FUMIGACIONES DIAZ (CUIT: 20-21332994-5, sin compras registradas)",
+      "MR. ROBERTS (CUIT: 20-38510462-7, sin compras registradas)",
+      "UTHGRA (CUIT: 20-22073045-0, sin compras registradas)",
+      "AMPERE (CUIT: 30-71650745-5, sin compras registradas)",
+      "LO DEL PELAO DESCARTABLES (CUIT: 23-30069039-4, sin compras registradas)",
+      "TELECOM (CUIT: , sin compras registradas)",
+      "SAT - SERV DE AGUA (CUIT: , sin compras registradas)",
+      "COMFIE (CUIT: 30-65906905-5, sin compras registradas)",
+      "PEDIDOS YA (CUIT: , sin compras registradas)",
+      "PROVAIDERS (CUIT: , sin compras registradas)",
+      "MUNICIPALIDAD (CUIT: , sin compras registradas)",
+      "LO DEL PELAO DESCARTABLES (CUIT: 23-30069039-4, sin compras registradas)",
+      "ANA MENENDEZ TORTAS (CUIT: 30-71601241-3, sin compras registradas)",
+      "NARANJAS GABRIEL (CUIT: , sin compras registradas)",
+      "JULIO CONST (CUIT: , sin compras registradas)",
+      "NAHUEL - INDIVIDUALES (CUIT: , sin compras registradas)",
+      "OBRA SOCIAL (CUIT: , sin compras registradas)",
+      "EHRLICH SRL (CUIT: 30-71076849-4, sin compras registradas)",
+      "FEDERACION PATRONAL (CUIT: 33-70736658-9, sin compras registradas)",
+      "GABRIEL SOBADORA (CUIT: , sin compras registradas)",
+      "CARNICERIA LOPEZ (CUIT: 27-30841217-8, sin compras registradas)",
+      "Cuneo Huevos (CUIT: 20-30268912-2, sin compras registradas)",
+      "SALUD PUBLICA (CUIT: , sin compras registradas)",
+      "LA ESPIGA DE ORO (CUIT: 27-03744367-6, sin compras registradas)",
+      "PROV. VAJILLAS CORDOBA (CUIT: , sin compras registradas)",
+      "comodin 24 (CUIT: 30-57841117-4, sin compras registradas)",
+      "LE COOK (CUIT: 23-20523983-9, sin compras registradas)",
+      "CARLOS AMAZADORA (CUIT: , sin compras registradas)",
+      "TORRES - CARPINTERO (CUIT: , sin compras registradas)",
+      "ELCON REPUESTOS (CUIT: 30-59150237-5, sin compras registradas)",
+      "PROVEEDOR VERDURAS (CUIT: , sin compras registradas)",
+      "NICOLAS LACTEOS (CUIT: , sin compras registradas)",
+      "PAULO REFORMAS (CUIT: , sin compras registradas)",
+      "GASMARKET (CUIT: 30-71492818-6, sin compras registradas)",
+      "SOULE MARCELO FERNANDO (CUIT: 20-30496678-6, sin compras registradas)",
+      "PROVEEDOR DE ACEITE (CUIT: , sin compras registradas)",
+      "CARPINTERO WALTER ALE (CUIT: , sin compras registradas)",
+      "NICOLAS COSALTA (CUIT: , sin compras registradas)",
+      "LA BODEGA DEL ANGEL (CUIT: 20-20226833-2, sin compras registradas)",
+      "BAZAR YAPUR (CUIT: 30-54501085-9, sin compras registradas)",
+      "PAULO MERCADERIA (CUIT: , sin compras registradas)",
+      "RATIONAL- CENTRAL 23 (CUIT: 30-71581156-8, sin compras registradas)",
+      "VIC - CAMARAS (CUIT: , sin compras registradas)",
+      "RAMIRO CERDOS (CUIT: , sin compras registradas)",
+      "TRANSPORTE PAULO (CUIT: , sin compras registradas)",
+      "REPARACION RATIONAL (CUIT: , sin compras registradas)",
+      "PROVEEDOR HUMITA Y TAMALES (CUIT: , sin compras registradas)",
+      "PAULO SURA- BAJO CERO (CUIT: , sin compras registradas)",
+      "AUGIER - HUEVOS (CUIT: , sin compras registradas)",
+      "ROPA PERSONAL (CUIT: , sin compras registradas)",
+      "TECNICO CAFE - EZEQUIEL (CUIT: , sin compras registradas)",
+      "CARNICERIA TOMAS (CUIT: , sin compras registradas)",
+      "ENVASADORA (CUIT: , sin compras registradas)",
+      "DESCARTABLES PABLO (CUIT: , sin compras registradas)",
+      "DISTRIBUIDORA DEL PILAR (CUIT: , sin compras registradas)",
+      "AIRUT VAJILLAS (CUIT: , sin compras registradas)",
+      "ATENOR (CUIT: 30-55454296-0, sin compras registradas)",
+      "LA MAXIMA (CUIT: 30-55454296-0, sin compras registradas)",
+      "NATALIO VERDURAS (CUIT: , sin compras registradas)",
+      "CUSTODIO DE ARCHIVOS (CUIT: , sin compras registradas)",
+      "JUGUERA (CUIT: , sin compras registradas)",
+      "MUSICA DJ (CUIT: , sin compras registradas)",
+      "BARMAN (CUIT: , sin compras registradas)",
+      "GUANTES (CUIT: , sin compras registradas)",
+      "SERVIS MAQUINARIAS COCINA (CUIT: , sin compras registradas)",
+      "JORGE AGUA - BOMBA - SISTERNA (CUIT: , sin compras registradas)",
+      "VAJILLAR (CUIT: 20-38601426-5, sin compras registradas)",
+      "ALTOS DE SINGLE (CUIT: , sin compras registradas)",
+      "SHAREOUT- ACEITE (CUIT: 30-70879606-5, sin compras registradas)",
+      "MULTICAPA SRL (CUIT: 30-71002799-0, sin compras registradas)",
+      "RODRIGUEZ HNOS (CUIT: 30-50275520-6, sin compras registradas)",
+      "LA ENTRERRIANA (CUIT: , sin compras registradas)",
+      "PEÑAFLOR (CUIT: , sin compras registradas)",
+      "RODOLFO CORREA - SILLAS (CUIT: , sin compras registradas)",
+      "PURO CERDO (CUIT: , sin compras registradas)",
+      "DISTRIBUIDORA VIDT S.R.L. (CUIT: 30-67377048-3, sin compras registradas)",
+      "RUBEN (CUIT: , sin compras registradas)",
+      "NUCLEO IT SRL (CUIT: 30-71133535-4, sin compras registradas)",
+      "COPIN (CUIT: 30-68000888-0, sin compras registradas)",
+      "BODEGA ESMERALDA (CUIT: 30-50258442-8, sin compras registradas)",
+      "PUBLICIDAD RADIO (CUIT: , sin compras registradas)",
+      "VIA GASTRONOMICA (CUIT: , sin compras registradas)",
+      "FINCA SAN RAMON CARNICERIA (CUIT: , sin compras registradas)",
+      "C Y V COMERCIALES SAS - frigor (CUIT: 30-71801968-7, sin compras registradas)",
+      "TURBOBLENDER GROUP (CUIT: 30-69255874-6, sin compras registradas)",
+      "LA SEVILLANITA (CUIT: , sin compras registradas)",
+      "IANFA IMPRENTA (CUIT: 27-27364891-2, sin compras registradas)",
+      "MOSETO SAS- QUESO (CUIT: 30-71654966-2, sin compras registradas)",
+      "VITIS (CUIT: 33-71410325-9, sin compras registradas)",
+      "STAMP S.R.L. (CUIT: 30-70737723-9, sin compras registradas)",
+      "CARO ESTUDIO (CUIT: , sin compras registradas)",
+      "SALUD PUBLICA (CUIT: 30-59150237-5, sin compras registradas)",
+      "RENTA TUCUMAN (CUIT: 30-59150237-5, sin compras registradas)",
+      "ROLLO TERMICO (CUIT: 30-59150237-5, sin compras registradas)",
+      "DAVID MANTENIMIENTO (CUIT: , sin compras registradas)",
+      "LOS PAISANITOS (CUIT: 20-36867643-9, sin compras registradas)",
+      "ALMAZEN (CUIT: 30-71523061-1, sin compras registradas)",
+      "ACONQUIJA REFRIGUERACION (CUIT: 30-71678621-4, sin compras registradas)",
+      "HONGOS VEGLIA (CUIT: 20-36867643-9, sin compras registradas)",
+      "MANTENIMIENTO PREVENTIVO (CUIT: , sin compras registradas)",
+      "CRESTA NEGRA (CUIT: , sin compras registradas)",
+      "DIST YAMIL (CUIT: , sin compras registradas)",
+      "CHOCLO RALLADO (CUIT: 30-59150237-5, sin compras registradas)",
+      "931 (CUIT: 30-59150237-5, sin compras registradas)",
+      "LA ARGENTINA CARNICERIA (CUIT: , sin compras registradas)",
+      "YANINI RIPIERA (CUIT: , sin compras registradas)",
+      "LUZ AZUL (CUIT: , sin compras registradas)",
+      "FORMAGGE (CUIT: 30-70833232-8, sin compras registradas)",
+      "EMILSE RRHH (CUIT: , sin compras registradas)",
+      "ALTO CAMPO SRL (CUIT: 30-70833232-8, sin compras registradas)",
+      "AVICOLA (CUIT: , sin compras registradas)",
+      "KENA SRL (CUIT: 30-71211875-6, sin compras registradas)",
+      "EL NUEVO EMPORIO (CUIT: 33-70703773-9, sin compras registradas)",
+      "STORAGE COMPAT S.A. (CUIT: 30-71187148-5, sin compras registradas)"
+    ]
+  },
+  "clientes": {
+    "total_count": 100,
+    "with_balance_count": 9,
+    "deudores_count": 9,
+    "acreedores_count": 0,
+    "top_deudores": [
+      {
+        "name": "FAMILIA / AMIGOS",
+        "document": "",
+        "balance": -26252600.07,
+        "tax_condition": "Consumidor Final",
+        "code": ""
+      },
+      {
+        "name": "PERSONAL 1",
+        "document": "",
+        "balance": -3915740.0,
+        "tax_condition": "Consumidor Final",
+        "code": ""
+      },
+      {
+        "name": "PERSONAL 2",
+        "document": "",
+        "balance": -2658600.0,
+        "tax_condition": "Consumidor Final",
+        "code": ""
+      },
+      {
+        "name": "ANDRES BUDEGUER",
+        "document": "",
+        "balance": -1036700.0,
+        "tax_condition": "Consumidor Final",
+        "code": ""
+      },
+      {
+        "name": "SERGIO CASTOLDI",
+        "document": "",
+        "balance": -913390.0,
+        "tax_condition": "Consumidor Final",
+        "code": ""
+      },
+      {
+        "name": "BUDEGUER PAULO",
+        "document": "",
+        "balance": -254500.0,
+        "tax_condition": "Consumidor Final",
+        "code": ""
+      },
+      {
+        "name": "SOTELO SUBCOMISARIO",
+        "document": "",
+        "balance": -253150.0,
+        "tax_condition": "Consumidor Final",
+        "code": ""
+      },
+      {
+        "name": "BUDEGUER LOURDES",
+        "document": "",
+        "balance": -41100.0,
+        "tax_condition": "Consumidor Final",
+        "code": ""
+      },
+      {
+        "name": "SANDRA JIMENEZ",
+        "document": "",
+        "balance": -28685.0,
+        "tax_condition": "Consumidor Final",
+        "code": ""
+      }
+    ],
+    "top_acreedores": [],
+    "all_with_balance": [
+      {
+        "name": "FAMILIA / AMIGOS",
+        "document": "",
+        "balance": -26252600.07,
+        "code": ""
+      },
+      {
+        "name": "PERSONAL 1",
+        "document": "",
+        "balance": -3915740.0,
+        "code": ""
+      },
+      {
+        "name": "PERSONAL 2",
+        "document": "",
+        "balance": -2658600.0,
+        "code": ""
+      },
+      {
+        "name": "ANDRES BUDEGUER",
+        "document": "",
+        "balance": -1036700.0,
+        "code": ""
+      },
+      {
+        "name": "SERGIO CASTOLDI",
+        "document": "",
+        "balance": -913390.0,
+        "code": ""
+      },
+      {
+        "name": "BUDEGUER PAULO",
+        "document": "",
+        "balance": -254500.0,
+        "code": ""
+      },
+      {
+        "name": "SOTELO SUBCOMISARIO",
+        "document": "",
+        "balance": -253150.0,
+        "code": ""
+      },
+      {
+        "name": "BUDEGUER LOURDES",
+        "document": "",
+        "balance": -41100.0,
+        "code": ""
+      },
+      {
+        "name": "SANDRA JIMENEZ",
+        "document": "",
+        "balance": -28685.0,
+        "code": ""
+      }
+    ]
+  },
+  "withdrawals_summary": {
+    "count": 4315,
+    "total": 634004636.1799997,
+    "large_withdrawals": [
+      {
+        "date": "2026-02-27T11:49:29",
+        "amount": 10800000.0,
+        "description": "",
+        "user": "ANDRES"
+      },
+      {
+        "date": "2025-12-24T03:13:05",
+        "amount": 3650000.0,
+        "description": "",
+        "user": "SERGIO"
+      },
+      {
+        "date": "2026-02-10T09:55:36",
+        "amount": 3080000.0,
+        "description": "",
+        "user": "SANDRA"
+      },
+      {
+        "date": "2026-03-21T02:31:48",
+        "amount": 2900000.0,
+        "description": "",
+        "user": "WALTER"
+      },
+      {
+        "date": "2025-12-19T02:18:41",
+        "amount": 2650000.0,
+        "description": "",
+        "user": "GABRIEL"
+      },
+      {
+        "date": "2026-01-23T01:52:00",
+        "amount": 2350000.0,
+        "description": "",
+        "user": "WALTER"
+      },
+      {
+        "date": "2026-03-08T17:53:13",
+        "amount": 2200000.0,
+        "description": "",
+        "user": "GABRIEL"
+      },
+      {
+        "date": "2026-06-30T11:46:15",
+        "amount": 2200000.0,
+        "description": "",
+        "user": "SANDRA"
+      },
+      {
+        "date": "2026-06-29T01:15:41",
+        "amount": 2150000.0,
+        "description": "",
+        "user": "NICOLAS"
+      },
+      {
+        "date": "2026-02-09T01:51:01",
+        "amount": 2050000.0,
+        "description": "",
+        "user": "NICOLAS"
+      },
+      {
+        "date": "2025-12-29T01:51:24",
+        "amount": 1950000.0,
+        "description": "",
+        "user": "NICOLAS"
+      },
+      {
+        "date": "2026-02-18T01:29:59",
+        "amount": 1950000.0,
+        "description": "",
+        "user": "WALTER"
+      },
+      {
+        "date": "2026-01-04T02:09:38",
+        "amount": 1900000.0,
+        "description": "",
+        "user": "NICOLAS"
+      },
+      {
+        "date": "2026-01-18T02:34:16",
+        "amount": 1900000.0,
+        "description": "",
+        "user": "NICOLAS"
+      },
+      {
+        "date": "2025-12-20T02:09:02",
+        "amount": 1850000.0,
+        "description": "",
+        "user": "NICOLAS"
+      },
+      {
+        "date": "2025-12-13T01:41:23",
+        "amount": 1800000.0,
+        "description": "",
+        "user": "NICOLAS"
+      },
+      {
+        "date": "2026-01-04T17:46:02",
+        "amount": 1800000.0,
+        "description": "",
+        "user": "GABRIEL"
+      },
+      {
+        "date": "2026-02-25T01:15:49",
+        "amount": 1800000.0,
+        "description": "",
+        "user": "WALTER"
+      },
+      {
+        "date": "2026-02-14T01:19:24",
+        "amount": 1750000.0,
+        "description": "",
+        "user": "NICOLAS"
+      },
+      {
+        "date": "2026-02-15T02:55:53",
+        "amount": 1750000.0,
+        "description": "",
+        "user": "NICOLAS"
+      }
+    ]
+  }
+}

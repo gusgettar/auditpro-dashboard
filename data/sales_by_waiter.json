@@ -1,0 +1,298 @@
+[
+  {
+    "user_name": "Dany capovilla",
+    "orders": 7035,
+    "revenue": 152047363.57,
+    "avg_ticket": 21612.99,
+    "removals": 0,
+    "discounts": 0.0
+  },
+  {
+    "user_name": "CYNTHIA FRIAS",
+    "orders": 4805,
+    "revenue": 137640010.75,
+    "avg_ticket": 28645.16,
+    "removals": 0,
+    "discounts": 0.0
+  },
+  {
+    "user_name": "gabriel monti",
+    "orders": 4122,
+    "revenue": 118807095.04,
+    "avg_ticket": 28822.68,
+    "removals": 0,
+    "discounts": 0.0
+  },
+  {
+    "user_name": "ARIEL",
+    "orders": 4084,
+    "revenue": 105068740.05,
+    "avg_ticket": 25726.92,
+    "removals": 0,
+    "discounts": 0.0
+  },
+  {
+    "user_name": "Pablo sosa",
+    "orders": 2247,
+    "revenue": 84903105.0,
+    "avg_ticket": 37785.09,
+    "removals": 0,
+    "discounts": 0.0
+  },
+  {
+    "user_name": "Acosta",
+    "orders": 3458,
+    "revenue": 84588945.4,
+    "avg_ticket": 24461.81,
+    "removals": 0,
+    "discounts": 0.0
+  },
+  {
+    "user_name": "SERGIO M",
+    "orders": 3978,
+    "revenue": 80827285.51,
+    "avg_ticket": 20318.57,
+    "removals": 0,
+    "discounts": 0.0
+  },
+  {
+    "user_name": "PABLO PETROSELLI",
+    "orders": 2060,
+    "revenue": 67699200.01,
+    "avg_ticket": 32863.69,
+    "removals": 0,
+    "discounts": 0.0
+  },
+  {
+    "user_name": "Pablo petroselli",
+    "orders": 1917,
+    "revenue": 66677910.0,
+    "avg_ticket": 34782.43,
+    "removals": 0,
+    "discounts": 0.0
+  },
+  {
+    "user_name": "luciana paz",
+    "orders": 2778,
+    "revenue": 66572608.78,
+    "avg_ticket": 23964.22,
+    "removals": 0,
+    "discounts": 0.0
+  },
+  {
+    "user_name": "cynthia frias",
+    "orders": 2308,
+    "revenue": 63579210.35,
+    "avg_ticket": 27547.32,
+    "removals": 0,
+    "discounts": 0.0
+  },
+  {
+    "user_name": "Vanesa peralta",
+    "orders": 1633,
+    "revenue": 54813179.88,
+    "avg_ticket": 33565.94,
+    "removals": 0,
+    "discounts": 0.0
+  },
+  {
+    "user_name": "luis perez",
+    "orders": 1963,
+    "revenue": 49799200.0,
+    "avg_ticket": 25368.93,
+    "removals": 0,
+    "discounts": 0.0
+  },
+  {
+    "user_name": "Sol Elias",
+    "orders": 1464,
+    "revenue": 48565610.0,
+    "avg_ticket": 33173.23,
+    "removals": 0,
+    "discounts": 0.0
+  },
+  {
+    "user_name": "PABLO SOSA",
+    "orders": 1472,
+    "revenue": 48381665.01,
+    "avg_ticket": 32867.98,
+    "removals": 0,
+    "discounts": 0.0
+  },
+  {
+    "user_name": "VANESA PERALTA",
+    "orders": 1088,
+    "revenue": 35317540.04,
+    "avg_ticket": 32460.97,
+    "removals": 0,
+    "discounts": 0.0
+  },
+  {
+    "user_name": "Luciana paz",
+    "orders": 1341,
+    "revenue": 34208169.77,
+    "avg_ticket": 25509.45,
+    "removals": 0,
+    "discounts": 0.0
+  },
+  {
+    "user_name": "Luis perez",
+    "orders": 978,
+    "revenue": 29021760.0,
+    "avg_ticket": 29674.6,
+    "removals": 0,
+    "discounts": 0.0
+  },
+  {
+    "user_name": "NICOLAS",
+    "orders": 940,
+    "revenue": 28153838.67,
+    "avg_ticket": 29950.89,
+    "removals": 935,
+    "discounts": 2508051.61
+  },
+  {
+    "user_name": "sol elias",
+    "orders": 806,
+    "revenue": 21368640.0,
+    "avg_ticket": 26511.96,
+    "removals": 0,
+    "discounts": 0.0
+  },
+  {
+    "user_name": "Luciana Paz",
+    "orders": 541,
+    "revenue": 14054330.17,
+    "avg_ticket": 25978.43,
+    "removals": 0,
+    "discounts": 0.0
+  },
+  {
+    "user_name": "GABRIEL",
+    "orders": 599,
+    "revenue": 13562801.38,
+    "avg_ticket": 22642.41,
+    "removals": 678,
+    "discounts": 1838838.85
+  },
+  {
+    "user_name": "LUIS PEREZ",
+    "orders": 568,
+    "revenue": 12093300.0,
+    "avg_ticket": 21291.02,
+    "removals": 0,
+    "discounts": 0.0
+  },
+  {
+    "user_name": "LUCIANA PAZ",
+    "orders": 495,
+    "revenue": 11227160.1,
+    "avg_ticket": 22681.13,
+    "removals": 0,
+    "discounts": 0.0
+  },
+  {
+    "user_name": "WALTER",
+    "orders": 398,
+    "revenue": 10467981.53,
+    "avg_ticket": 26301.46,
+    "removals": 393,
+    "discounts": 599275.04
+  },
+  {
+    "user_name": "SANDRA",
+    "orders": 567,
+    "revenue": 10400057.57,
+    "avg_ticket": 18342.25,
+    "removals": 527,
+    "discounts": 1073432.87
+  },
+  {
+    "user_name": "Sergio M",
+    "orders": 370,
+    "revenue": 10065300.07,
+    "avg_ticket": 27203.51,
+    "removals": 0,
+    "discounts": 0.0
+  },
+  {
+    "user_name": "paulo gerez",
+    "orders": 224,
+    "revenue": 5452100.0,
+    "avg_ticket": 24339.73,
+    "removals": 0,
+    "discounts": 0.0
+  },
+  {
+    "user_name": "SERGIO",
+    "orders": 234,
+    "revenue": 5125437.76,
+    "avg_ticket": 21903.58,
+    "removals": 275,
+    "discounts": 488037.25
+  },
+  {
+    "user_name": "GABRIEL MONTI",
+    "orders": 160,
+    "revenue": 3995200.0,
+    "avg_ticket": 24970.0,
+    "removals": 0,
+    "discounts": 0.0
+  },
+  {
+    "user_name": "Paulo Gerez",
+    "orders": 97,
+    "revenue": 2428700.0,
+    "avg_ticket": 25038.14,
+    "removals": 0,
+    "discounts": 0.0
+  },
+  {
+    "user_name": "tablet",
+    "orders": 99,
+    "revenue": 1852850.23,
+    "avg_ticket": 18715.66,
+    "removals": 0,
+    "discounts": 0.0
+  },
+  {
+    "user_name": "Ariel",
+    "orders": 38,
+    "revenue": 804500.0,
+    "avg_ticket": 21171.05,
+    "removals": 0,
+    "discounts": 0.0
+  },
+  {
+    "user_name": "NACHO",
+    "orders": 39,
+    "revenue": 728239.9,
+    "avg_ticket": 18672.82,
+    "removals": 47,
+    "discounts": 87095.1
+  },
+  {
+    "user_name": "Cynthia frias",
+    "orders": 26,
+    "revenue": 633300.0,
+    "avg_ticket": 24357.69,
+    "removals": 0,
+    "discounts": 0.0
+  },
+  {
+    "user_name": "SOL ELIAS",
+    "orders": 33,
+    "revenue": 561900.0,
+    "avg_ticket": 17027.27,
+    "removals": 0,
+    "discounts": 0.0
+  },
+  {
+    "user_name": "ANDRES",
+    "orders": 2,
+    "revenue": 112801.0,
+    "avg_ticket": 56400.5,
+    "removals": 2,
+    "discounts": 0.0
+  }
+]

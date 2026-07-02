@@ -1,0 +1,302 @@
+[
+  {
+    "name": "LIGHT CAFE CON LECHE",
+    "quantity": 17244.0,
+    "revenue": 114620400.0,
+    "avg_price": 6646.97
+  },
+  {
+    "name": "CLASICO CAFE CON LECHE",
+    "quantity": 10570.0,
+    "revenue": 64292700.0,
+    "avg_price": 6082.56
+  },
+  {
+    "name": "TRIPLE DE JAMON Y QUESO",
+    "quantity": 6604.0,
+    "revenue": 45126000.0,
+    "avg_price": 6833.13
+  },
+  {
+    "name": "COCA",
+    "quantity": 12430.0,
+    "revenue": 40858500.0,
+    "avg_price": 3287.09
+  },
+  {
+    "name": "MILANESA NAPOLITANA PARA 2",
+    "quantity": 1104.0,
+    "revenue": 39968000.0,
+    "avg_price": 36202.9
+  },
+  {
+    "name": "JARRA LIMONADA CON MENTA Y JENGIBRE",
+    "quantity": 4127.0,
+    "revenue": 39640000.0,
+    "avg_price": 9605.04
+  },
+  {
+    "name": "MATAMBRE AL VERDEO PARA 2",
+    "quantity": 903.0,
+    "revenue": 34407000.0,
+    "avg_price": 38102.99
+  },
+  {
+    "name": "CORTADO EN JARRITA",
+    "quantity": 8542.0,
+    "revenue": 30083400.0,
+    "avg_price": 3521.82
+  },
+  {
+    "name": "AMERICANO CAFE CON LECHE",
+    "quantity": 3993.0,
+    "revenue": 30069600.0,
+    "avg_price": 7530.58
+  },
+  {
+    "name": "HEINEKEN X1L",
+    "quantity": 2150.0,
+    "revenue": 29020950.0,
+    "avg_price": 13498.12
+  },
+  {
+    "name": "JARRA LIMONADA CLASICA",
+    "quantity": 3124.0,
+    "revenue": 26672000.0,
+    "avg_price": 8537.77
+  },
+  {
+    "name": "MEXICANO ENTERO",
+    "quantity": 1111.0,
+    "revenue": 23996000.0,
+    "avg_price": 21598.56
+  },
+  {
+    "name": "TOSTON AVOCADO CAFE CON LECHE",
+    "quantity": 2424.0,
+    "revenue": 20742200.0,
+    "avg_price": 8557.01
+  },
+  {
+    "name": "JARRA LIMONADA DE FRUTOS ROJOS",
+    "quantity": 2101.0,
+    "revenue": 20193000.0,
+    "avg_price": 9611.14
+  },
+  {
+    "name": "TRIPLE DE TERNERA Y QUESO",
+    "quantity": 2260.0,
+    "revenue": 16797300.0,
+    "avg_price": 7432.43
+  },
+  {
+    "name": "CAFE EN JARRITA",
+    "quantity": 4756.0,
+    "revenue": 16763400.0,
+    "avg_price": 3524.68
+  },
+  {
+    "name": "EMPANADA DE CARNE",
+    "quantity": 7718.0,
+    "revenue": 16606203.0,
+    "avg_price": 2151.62
+  },
+  {
+    "name": "PROMO MATAMBRE + JARRA",
+    "quantity": 378.0,
+    "revenue": 16443000.0,
+    "avg_price": 43500.0
+  },
+  {
+    "name": "IMPERIAL 1Lt",
+    "quantity": 1454.0,
+    "revenue": 15994000.0,
+    "avg_price": 11000.0
+  },
+  {
+    "name": "COCA ZERO",
+    "quantity": 4712.0,
+    "revenue": 15530800.0,
+    "avg_price": 3296.01
+  },
+  {
+    "name": "SANGUCHE RADICAL",
+    "quantity": 1082.0,
+    "revenue": 15479000.0,
+    "avg_price": 14305.91
+  },
+  {
+    "name": "LICUADO BANANA",
+    "quantity": 3143.0,
+    "revenue": 15009500.0,
+    "avg_price": 4775.53
+  },
+  {
+    "name": "SALUDABLE CAFE CON LECHE",
+    "quantity": 1433.0,
+    "revenue": 14295200.0,
+    "avg_price": 9975.72
+  },
+  {
+    "name": "CAFE CON LECHE",
+    "quantity": 3633.0,
+    "revenue": 14086000.0,
+    "avg_price": 3877.24
+  },
+  {
+    "name": "MILANESA NAPOLITANA PARA 1",
+    "quantity": 673.0,
+    "revenue": 13521000.0,
+    "avg_price": 20090.64
+  },
+  {
+    "name": "LOMO ANCHO",
+    "quantity": 561.0,
+    "revenue": 13227000.0,
+    "avg_price": 23577.54
+  },
+  {
+    "name": "TIRA DE ASADO",
+    "quantity": 319.0,
+    "revenue": 12488000.0,
+    "avg_price": 39147.34
+  },
+  {
+    "name": "RABAS AMERICANA",
+    "quantity": 602.0,
+    "revenue": 12435000.0,
+    "avg_price": 20656.15
+  },
+  {
+    "name": "PIZZA ESPECIAL GRANDE",
+    "quantity": 690.0,
+    "revenue": 12338000.0,
+    "avg_price": 17881.16
+  },
+  {
+    "name": "MATAMBRE A LA PIZZA PARA 2",
+    "quantity": 322.0,
+    "revenue": 12266000.0,
+    "avg_price": 38093.17
+  },
+  {
+    "name": "TOSTON AMERICANO CAFE CON LECHE",
+    "quantity": 1398.0,
+    "revenue": 11988700.0,
+    "avg_price": 8575.61
+  },
+  {
+    "name": "TRIPLE DE TERNERA, QUESO Y TOMATE",
+    "quantity": 1370.0,
+    "revenue": 11036000.0,
+    "avg_price": 8055.47
+  },
+  {
+    "name": "AGUA SIN GAS",
+    "quantity": 3233.0,
+    "revenue": 10640500.0,
+    "avg_price": 3291.22
+  },
+  {
+    "name": "SANGUCHE DE MILANESA",
+    "quantity": 829.0,
+    "revenue": 10514000.0,
+    "avg_price": 12682.75
+  },
+  {
+    "name": "CAFE EN POCILLO",
+    "quantity": 3207.0,
+    "revenue": 10338550.0,
+    "avg_price": 3223.74
+  },
+  {
+    "name": "MENU BONDIOLA",
+    "quantity": 1097.0,
+    "revenue": 10011900.0,
+    "avg_price": 9126.62
+  },
+  {
+    "name": "MENU MILANESA DE PECETO",
+    "quantity": 1048.0,
+    "revenue": 9576500.0,
+    "avg_price": 9137.88
+  },
+  {
+    "name": "PIZZA MUZZARELLA GRANDE",
+    "quantity": 728.0,
+    "revenue": 9435859.0,
+    "avg_price": 12961.34
+  },
+  {
+    "name": "SPRITE",
+    "quantity": 2806.0,
+    "revenue": 9247600.0,
+    "avg_price": 3295.65
+  },
+  {
+    "name": "MATAMBRE AL VERDEO PARA 1",
+    "quantity": 409.0,
+    "revenue": 9067000.0,
+    "avg_price": 22168.7
+  },
+  {
+    "name": "LIGHT TE/MATE",
+    "quantity": 1291.0,
+    "revenue": 8559800.0,
+    "avg_price": 6630.36
+  },
+  {
+    "name": "PICADA CALIENTE NUEVA",
+    "quantity": 207.0,
+    "revenue": 8343000.0,
+    "avg_price": 40304.35
+  },
+  {
+    "name": "MENU SUPREMA",
+    "quantity": 886.0,
+    "revenue": 8109900.0,
+    "avg_price": 9153.39
+  },
+  {
+    "name": "SORRENTINOS DE TERNERA Y QUESO",
+    "quantity": 719.0,
+    "revenue": 8055500.0,
+    "avg_price": 11203.76
+  },
+  {
+    "name": "DEL CHEF CAFE CON LECHE",
+    "quantity": 787.0,
+    "revenue": 7855700.0,
+    "avg_price": 9981.83
+  },
+  {
+    "name": "EMPANADA DE POLLO",
+    "quantity": 3616.0,
+    "revenue": 7795200.0,
+    "avg_price": 2155.75
+  },
+  {
+    "name": "TORTA INDIVIDUAL",
+    "quantity": 1204.0,
+    "revenue": 7461300.0,
+    "avg_price": 6197.09
+  },
+  {
+    "name": "MEDIALUNA",
+    "quantity": 5283.0,
+    "revenue": 7427000.0,
+    "avg_price": 1405.83
+  },
+  {
+    "name": "LASAGNA BOLOGNESA",
+    "quantity": 660.0,
+    "revenue": 7394000.0,
+    "avg_price": 11203.03
+  },
+  {
+    "name": "HAMBURGUESA AMERICANA",
+    "quantity": 627.0,
+    "revenue": 7317000.0,
+    "avg_price": 11669.86
+  }
+]

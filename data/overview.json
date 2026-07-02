@@ -1,0 +1,15 @@
+{
+  "total_orders": 54967,
+  "total_revenue": 1481607037.54,
+  "avg_ticket": 26954.48,
+  "total_invoices": 19623,
+  "total_invoiced": 804332341.83,
+  "total_purchases": 2262,
+  "total_purchase_amount": 745858246.3,
+  "total_withdrawals": 634004636.18,
+  "total_customers": 1548,
+  "total_products": 696,
+  "date_from": "2025-12-09",
+  "date_to": "2026-06-30",
+  "db_version": "2025-04-10T00:00:00"
+}
