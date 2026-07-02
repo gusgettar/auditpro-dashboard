@@ -16,24 +16,27 @@ const BLOB_PATHNAME = 'auditpro-users.json'
 const LOCAL_PATH = path.join(process.cwd(), 'data', 'users.json')
 
 // Blob is available when the store is connected (Vercel sets this automatically)
-function getBlobToken(): string | undefined {
-  // Vercel creates different env var names depending on store type
-  return (
+function getBlobToken(): string {
+  const tok =
     process.env.BLOB_READ_WRITE_TOKEN ||
     process.env.BLOB_READ_WRITE_TOKEN_READ_WRITE_TOKEN
-  )
+  if (!tok) throw new Error('No Vercel Blob token found in environment')
+  return tok
 }
 
 function blobAvailable(): boolean {
-  return !!(getBlobToken() || process.env.BLOB_READ_WRITE_TOKEN_STORE_ID)
+  return !!(
+    process.env.BLOB_READ_WRITE_TOKEN ||
+    process.env.BLOB_READ_WRITE_TOKEN_READ_WRITE_TOKEN ||
+    process.env.BLOB_READ_WRITE_TOKEN_STORE_ID
+  )
 }
 
 // ── Read ──────────────────────────────────────────────────────────────────────
 export async function readUsers(): Promise<User[]> {
   if (blobAvailable()) {
     try {
-      // No explicit token — SDK auto-discovers from Vercel env
-      const { blobs } = await list({ prefix: BLOB_PATHNAME })
+      const { blobs } = await list({ prefix: BLOB_PATHNAME, token: getBlobToken() })
       const blob = blobs.find(b => b.pathname === BLOB_PATHNAME)
 
       if (blob) {
@@ -74,6 +77,7 @@ export async function writeUsers(users: User[]): Promise<void> {
     await put(BLOB_PATHNAME, JSON.stringify(users, null, 2), {
       access: 'public',
       addRandomSuffix: false,
+      token: getBlobToken(),
     })
   } else {
     fs.writeFileSync(LOCAL_PATH, JSON.stringify(users, null, 2))

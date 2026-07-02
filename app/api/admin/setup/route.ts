@@ -37,8 +37,7 @@ export async function GET(req: NextRequest) {
   }
 
   try {
-    // Check existing blobs (SDK auto-discovers credentials)
-    const { blobs } = await list({ prefix: 'auditpro-users.json' })
+    const { blobs } = await list({ prefix: 'auditpro-users.json', token: effectiveToken! })
     const existing = blobs.find(b => b.pathname === 'auditpro-users.json')
 
     if (existing) {
@@ -58,6 +57,7 @@ export async function GET(req: NextRequest) {
     const result = await put('auditpro-users.json', usersContent, {
       access: 'public',
       addRandomSuffix: false,
+      token: effectiveToken!,
     })
 
     return NextResponse.json({
