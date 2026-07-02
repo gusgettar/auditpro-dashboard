@@ -75,7 +75,7 @@ export async function writeUsers(users: User[]): Promise<void> {
   if (blobAvailable()) {
     // No explicit token — SDK auto-discovers from Vercel env
     await put(BLOB_PATHNAME, JSON.stringify(users, null, 2), {
-      access: 'public' as any, // private store forces private regardless
+      access: 'private' as any,
       addRandomSuffix: false,
       token: getBlobToken(),
     })
