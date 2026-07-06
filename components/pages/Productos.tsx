@@ -10,7 +10,8 @@ import axios from 'axios'
 // ── Types ────────────────────────────────────────────────────────────────────
 interface Ingredient { component_id: string; component_name: string; quantity: number; unit_cost: number; current_stock: number }
 interface Recipe { product_id: string; name: string; price: number; cost: number; recipe: Ingredient[] }
-interface Product { product_id: string; code: string; name: string; rubro_name: string; price: number; cost: number; alicuota: number; inactive: boolean; is_for_sale: boolean }
+interface Product { product_id: string; code: string; name: string; rubro_name: string; sub_rubro_name?: string; sub_rubro_id?: string; price: number; cost: number; alicuota: number; inactive: boolean; is_for_sale: boolean }
+interface Subrubro { sub_rubro_id: string; name: string; rubro_id: string; rubro_name: string }
 
 // ── Export helpers ────────────────────────────────────────────────────────────
 async function exportPDF(recipes: Recipe[], filter: string) {
@@ -163,6 +164,11 @@ function ProductRow({ product, recipe, isExpanded, onToggle }: {
         <td className="px-3 py-3">
           <span className="px-2 py-0.5 bg-dark-600 rounded-full text-[10px] text-gray-400">{product.rubro_name}</span>
         </td>
+        <td className="px-3 py-3">
+          {product.sub_rubro_name
+            ? <span className="px-2 py-0.5 bg-dark-700 border border-white/10 rounded-full text-[10px] text-gray-500">{product.sub_rubro_name}</span>
+            : <span className="text-gray-700 text-[10px]">—</span>}
+        </td>
         <td className="px-3 py-3 text-right text-gray-200 font-medium">{formatARS(product.price)}</td>
         <td className="px-3 py-3 text-right text-gray-400">{formatARS(product.cost)}</td>
         <td className={`px-3 py-3 text-right font-bold text-sm ${marginColor}`}>{margin.toFixed(1)}%</td>
@@ -177,7 +183,7 @@ function ProductRow({ product, recipe, isExpanded, onToggle }: {
       </tr>
       {isExpanded && recipe && (
         <tr className="border-b border-indigo-500/10 bg-dark-700/20">
-          <td colSpan={9} className="px-8 py-4">
+          <td colSpan={10} className="px-8 py-4">
             <div className="space-y-2">
               <p className="text-xs font-semibold text-indigo-300 mb-3 flex items-center gap-2">
                 <Package size={12}/> Receta: {recipe.name}
@@ -226,9 +232,11 @@ function ProductRow({ product, recipe, isExpanded, onToggle }: {
 export default function Productos() {
   const [products, setProducts] = useState<Product[]>([])
   const [recipes, setRecipes] = useState<Recipe[]>([])
+  const [subrubros, setSubrubros] = useState<Subrubro[]>([])
   const [loading, setLoading] = useState(true)
   const [search, setSearch] = useState('')
   const [selectedRubro, setSelectedRubro] = useState('')
+  const [selectedSubrubro, setSelectedSubrubro] = useState('')
   const [showInactive, setShowInactive] = useState(false)
   const [onlyWithRecipe, setOnlyWithRecipe] = useState(false)
   const [expandedId, setExpandedId] = useState<string | null>(null)
@@ -238,9 +246,11 @@ export default function Productos() {
     Promise.all([
       fetchProducts(),
       axios.get('/api/products-recipes').then(r => r.data),
-    ]).then(([prods, recs]) => {
+      axios.get('/api/subrubros').then(r => r.data),
+    ]).then(([prods, recs, subs]) => {
       setProducts(Array.isArray(prods) ? prods : [])
       setRecipes(Array.isArray(recs) ? recs : [])
+      setSubrubros(Array.isArray(subs) ? subs : [])
     }).finally(() => setLoading(false))
   }, [])
 
@@ -255,17 +265,24 @@ export default function Productos() {
     return products.map(p => p.rubro_name).filter(r => r && !seen[r] && (seen[r] = true)).sort()
   }, [products])
 
+  // Subcategorías filtradas por la categoría seleccionada
+  const availableSubrubros = useMemo(() => {
+    if (!selectedRubro) return subrubros
+    return subrubros.filter(s => s.rubro_name === selectedRubro)
+  }, [subrubros, selectedRubro])
+
   const filtered = useMemo(() => {
     let list = products
     if (!showInactive) list = list.filter(p => !p.inactive)
     if (onlyWithRecipe) list = list.filter(p => !!recipeMap[p.product_id])
     if (selectedRubro) list = list.filter(p => p.rubro_name === selectedRubro)
+    if (selectedSubrubro) list = list.filter(p => p.sub_rubro_name === selectedSubrubro)
     if (search) {
       const q = search.toLowerCase()
       list = list.filter(p => p.name.toLowerCase().includes(q) || p.code?.toLowerCase().includes(q))
     }
     return list
-  }, [products, search, selectedRubro, showInactive, onlyWithRecipe, recipeMap])
+  }, [products, search, selectedRubro, selectedSubrubro, showInactive, onlyWithRecipe, recipeMap])
 
   // Recipes matching current filter for export
   const filteredRecipes = useMemo(() =>
@@ -350,12 +367,24 @@ export default function Productos() {
         {/* Rubro filter */}
         <div className="flex items-center gap-1.5 bg-dark-700 border border-white/10 rounded-lg px-2.5 py-2">
           <Tag size={12} className="text-gray-500 shrink-0"/>
-          <select value={selectedRubro} onChange={e => setSelectedRubro(e.target.value)}
+          <select value={selectedRubro} onChange={e => { setSelectedRubro(e.target.value); setSelectedSubrubro('') }}
             className="bg-transparent text-gray-300 text-xs focus:outline-none">
             <option value="">Todas las categorías</option>
             {rubros.map(r => <option key={r} value={r}>{r}</option>)}
           </select>
         </div>
+
+        {/* Subrubro filter — only shows when there are available subrubros */}
+        {availableSubrubros.length > 0 && (
+          <div className="flex items-center gap-1.5 bg-dark-700 border border-white/10 rounded-lg px-2.5 py-2">
+            <Filter size={12} className="text-gray-500 shrink-0"/>
+            <select value={selectedSubrubro} onChange={e => setSelectedSubrubro(e.target.value)}
+              className="bg-transparent text-gray-300 text-xs focus:outline-none max-w-[180px]">
+              <option value="">Todas las subcategorías</option>
+              {availableSubrubros.map(s => <option key={s.sub_rubro_id} value={s.name}>{s.name}</option>)}
+            </select>
+          </div>
+        )}
 
         {/* Toggles */}
         <label className="flex items-center gap-1.5 text-xs text-gray-400 cursor-pointer select-none">
@@ -387,6 +416,7 @@ export default function Productos() {
                 <th className="text-left px-3 py-3 font-medium">Cód.</th>
                 <th className="text-left px-3 py-3 font-medium">Producto</th>
                 <th className="text-left px-3 py-3 font-medium">Categoría</th>
+                <th className="text-left px-3 py-3 font-medium">Subcategoría</th>
                 <th className="text-right px-3 py-3 font-medium">Precio</th>
                 <th className="text-right px-3 py-3 font-medium">Costo</th>
                 <th className="text-right px-3 py-3 font-medium">Margen</th>
