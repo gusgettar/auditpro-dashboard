@@ -6,6 +6,7 @@ import {
 } from 'lucide-react'
 import { fetchProducts, formatARS, formatNumber } from '@/lib/api'
 import axios from 'axios'
+import toast from 'react-hot-toast'
 
 // ── Types ────────────────────────────────────────────────────────────────────
 interface Ingredient { component_id: string; component_name: string; quantity: number; unit_cost: number; current_stock: number }
@@ -295,14 +296,30 @@ export default function Productos() {
   const lowStockCount = recipes.reduce((s, r) => s + r.recipe.filter(i => i.current_stock < 0).length, 0)
 
   const handleExportPDF = async () => {
+    if (filteredRecipes.length === 0) {
+      toast.error('No hay recetas cargadas para exportar')
+      return
+    }
     setExporting('pdf')
     try { await exportPDF(filteredRecipes, selectedRubro) }
+    catch (err) {
+      console.error('Error exportando PDF de recetas:', err)
+      toast.error('No se pudo generar el PDF. Reintentá o recargá la página.')
+    }
     finally { setExporting(null) }
   }
 
   const handleExportExcel = async () => {
+    if (filtered.length === 0) {
+      toast.error('No hay productos para exportar')
+      return
+    }
     setExporting('excel')
     try { await exportExcel(filteredRecipes, filtered, selectedRubro) }
+    catch (err) {
+      console.error('Error exportando Excel de productos:', err)
+      toast.error('No se pudo generar el Excel. Reintentá o recargá la página.')
+    }
     finally { setExporting(null) }
   }
 
